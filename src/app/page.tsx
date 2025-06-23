@@ -50,7 +50,7 @@ export default function Home() {
                 <div className="text-4xl font-light text-black my-16">enabling</div>
               </div>
               <div className="mt-24">
-                <div className="text-6xl font-light text-blue-900">
+                <div className="text-7xl font-light text-blue-900">
                   A Secondary Market for Retail Investors in Alternative Investments
                 </div>
               </div>
@@ -137,67 +137,28 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="w-full py-16 bg-white">
+        <div className="w-full py-8 bg-white">
           <div className="max-w-[90rem] mx-auto px-6">
-            <h2 className="text-4xl font-light text-blue-900 mb-12">Latest Insights</h2>
+            <h2 className="text-4xl font-light text-blue-900 mb-8">Latest Insights</h2>
             <div className="scroll-container">
               <div className="scroll-content">
                 {/* First set of articles */}
-                <div className="flex gap-10">
-                  <article className="article-box">
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src="/insights/pain-points.jpg"
-                        alt="Private Asset Reporting"
-                        fill
-                        className="object-cover w-full h-full"
-                        priority
-                      />
-                    </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Pain Points in Private Asset Reporting</h3>
-                    <Link href="/articles/private-asset-reporting" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
-                  </article>
-
-                  <article className="article-box">
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src="/insights/liquidity-solutions.jpg"
-                        alt="Liquidity Solutions"
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Liquidity Solutions for Private Assets</h3>
-                    <Link href="/articles/liquidity-solutions" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
-                  </article>
-
-                  <article className="article-box">
+                <div className="flex gap-6">
+                  <article className="article-box w-[260px]">
                     <div className="relative w-full h-48 overflow-hidden">
                       <Image
                         src="/insights/data-challenges.jpg"
                         alt="Data Challenges and Automation"
                         fill
                         className="object-cover w-full h-full"
+                        priority
                       />
                     </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Data Challenges and Automation</h3>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Allocator Data Challenges & Automation</h3>
                     <Link href="/articles/data-challenges-automation" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
                   </article>
 
-                  <article className="article-box">
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src="/insights/neural-networks.jpg"
-                        alt="Neural Networks"
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Utilizing Neural Networks</h3>
-                    <Link href="/articles/neural-networks" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
-                  </article>
-
-                  <article className="article-box">
+                  <article className="article-box w-[260px]">
                     <div className="relative w-full h-48 overflow-hidden">
                       <Image
                         src="/insights/secondary-market.jpg"
@@ -206,11 +167,24 @@ export default function Home() {
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Secondary Market Platform</h3>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Venturis Secondary Market Platform</h3>
                     <Link href="/articles/secondary-market-platform" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
                   </article>
 
-                  <article className="article-box">
+                  <article className="article-box w-[260px]">
+                    <div className="relative w-full h-48 overflow-hidden">
+                      <Image
+                        src="/insights/neural-networks.jpg"
+                        alt="Neural Networks and ML"
+                        fill
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Utilizing Regression Analysis, Neural Networks, and ML</h3>
+                    <Link href="/articles/neural-networks" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
+                  </article>
+
+                  <article className="article-box w-[260px]">
                     <div className="relative w-full h-48 overflow-hidden">
                       <Image
                         src="/insights/market-trends.jpg"
@@ -219,67 +193,28 @@ export default function Home() {
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Market Trends</h3>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Private Market Trends & AI Predictions</h3>
                     <Link href="/articles/market-trends" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
                   </article>
                 </div>
 
                 {/* Duplicate set for seamless scrolling */}
-                <div className="flex gap-10">
-                  <article className="article-box">
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src="/insights/pain-points.jpg"
-                        alt="Private Asset Reporting"
-                        fill
-                        className="object-cover w-full h-full"
-                        priority
-                      />
-                    </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Pain Points in Private Asset Reporting</h3>
-                    <Link href="/articles/private-asset-reporting" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
-                  </article>
-
-                  <article className="article-box">
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src="/insights/liquidity-solutions.jpg"
-                        alt="Liquidity Solutions"
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Liquidity Solutions for Private Assets</h3>
-                    <Link href="/articles/liquidity-solutions" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
-                  </article>
-
-                  <article className="article-box">
+                <div className="flex gap-6">
+                  <article className="article-box w-[260px]">
                     <div className="relative w-full h-48 overflow-hidden">
                       <Image
                         src="/insights/data-challenges.jpg"
                         alt="Data Challenges and Automation"
                         fill
                         className="object-cover w-full h-full"
+                        priority
                       />
                     </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Data Challenges and Automation</h3>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Allocator Data Challenges & Automation</h3>
                     <Link href="/articles/data-challenges-automation" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
                   </article>
 
-                  <article className="article-box">
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src="/insights/neural-networks.jpg"
-                        alt="Neural Networks"
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Utilizing Neural Networks</h3>
-                    <Link href="/articles/neural-networks" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
-                  </article>
-
-                  <article className="article-box">
+                  <article className="article-box w-[260px]">
                     <div className="relative w-full h-48 overflow-hidden">
                       <Image
                         src="/insights/secondary-market.jpg"
@@ -288,11 +223,24 @@ export default function Home() {
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Secondary Market Platform</h3>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Venturis Secondary Market Platform</h3>
                     <Link href="/articles/secondary-market-platform" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
                   </article>
 
-                  <article className="article-box">
+                  <article className="article-box w-[260px]">
+                    <div className="relative w-full h-48 overflow-hidden">
+                      <Image
+                        src="/insights/neural-networks.jpg"
+                        alt="Neural Networks and ML"
+                        fill
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Utilizing Regression Analysis, Neural Networks, and ML</h3>
+                    <Link href="/articles/neural-networks" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
+                  </article>
+
+                  <article className="article-box w-[260px]">
                     <div className="relative w-full h-48 overflow-hidden">
                       <Image
                         src="/insights/market-trends.jpg"
@@ -301,7 +249,7 @@ export default function Home() {
                         className="object-cover w-full h-full"
                       />
                     </div>
-                    <h3 className="text-2xl font-medium text-blue-900 mb-4 mt-6 min-h-[4rem] break-words">Market Trends</h3>
+                    <h3 className="text-xl font-medium text-blue-900 mb-4 mt-6 min-h-[6rem] break-words whitespace-normal overflow-hidden">Private Market Trends & AI Predictions</h3>
                     <Link href="/articles/market-trends" className="text-lg text-blue-900 hover:text-blue-700">Read More →</Link>
                   </article>
                 </div>

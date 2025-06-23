@@ -8,8 +8,8 @@ export default function Footer() {
       <div className="max-w-[90rem] mx-auto px-6">
         <div className="grid grid-cols-4 gap-12">
           <div>
-            <h4 className="text-xl font-medium text-blue-900 mb-6">Company</h4>
-            <div className="space-y-4">
+            <h4 className="text-xl font-medium text-blue-900 mb-4">Company</h4>
+            <div className="space-y-1">
               <Link href="/about" className="block text-gray-600 hover:text-blue-900">About Us</Link>
               <Link href="/careers" className="block text-gray-600 hover:text-blue-900">Careers</Link>
               <Link href="/contact" className="block text-gray-600 hover:text-blue-900">Contact</Link>
@@ -17,8 +17,8 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-xl font-medium text-blue-900 mb-6">Solutions</h4>
-            <div className="space-y-4">
+            <h4 className="text-xl font-medium text-blue-900 mb-4">Solutions</h4>
+            <div className="space-y-1">
               <Link href="/solutions/investment-teams" className="block text-gray-600 hover:text-blue-900">Investment Teams</Link>
               <Link href="/solutions/front-office" className="block text-gray-600 hover:text-blue-900">Front Office</Link>
               <Link href="/solutions/secondary-market" className="block text-gray-600 hover:text-blue-900">Secondary Market</Link>
@@ -26,8 +26,8 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-xl font-medium text-blue-900 mb-6">Resources</h4>
-            <div className="space-y-4">
+            <h4 className="text-xl font-medium text-blue-900 mb-4">Resources</h4>
+            <div className="space-y-1">
               <Link href="/blog" className="block text-gray-600 hover:text-blue-900">Blog</Link>
               <Link href="/insights" className="block text-gray-600 hover:text-blue-900">Insights</Link>
               <Link href="/documentation" className="block text-gray-600 hover:text-blue-900">Documentation</Link>
@@ -35,8 +35,8 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4 className="text-xl font-medium text-blue-900 mb-6">Legal</h4>
-            <div className="space-y-4">
+            <h4 className="text-xl font-medium text-blue-900 mb-4">Legal</h4>
+            <div className="space-y-1">
               <Link href="/legal/privacy" className="block text-gray-600 hover:text-blue-900">Privacy Policy</Link>
               <Link href="/legal/terms" className="block text-gray-600 hover:text-blue-900">Terms of Service</Link>
               <Link href="/security" className="block text-gray-600 hover:text-blue-900">Security</Link>

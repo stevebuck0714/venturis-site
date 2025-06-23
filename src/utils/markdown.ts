@@ -16,43 +16,67 @@ export interface ArticleData {
 }
 
 export async function getArticle(id: string): Promise<ArticleData> {
-  const fullPath = path.join(articlesDirectory, `${id}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  try {
+    const fullPath = path.join(articlesDirectory, `${id}.md`);
+    const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-  // Use gray-matter to parse the post metadata section
-  const matterResult = matter(fileContents);
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents);
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+      .use(html)
+      .process(matterResult.content);
+    const contentHtml = processedContent.toString();
 
-  return {
-    id,
-    contentHtml,
-    title: matterResult.data.title,
-    date: matterResult.data.date,
-    excerpt: matterResult.data.excerpt,
-    author: matterResult.data.author,
-  };
+    // Ensure all required fields are present
+    if (!matterResult.data.title || !matterResult.data.date || !matterResult.data.excerpt || !matterResult.data.author) {
+      throw new Error(`Missing required fields in ${id}.md`);
+    }
+
+    return {
+      id,
+      contentHtml,
+      title: matterResult.data.title,
+      date: matterResult.data.date,
+      excerpt: matterResult.data.excerpt,
+      author: matterResult.data.author,
+    };
+  } catch (error) {
+    console.error(`Error loading article ${id}:`, error);
+    throw error;
+  }
 }
 
 export async function getAllArticles(): Promise<ArticleData[]> {
-  const fileNames = fs.readdirSync(articlesDirectory);
-  const allArticlesData = await Promise.all(
-    fileNames.map(async (fileName) => {
-      const id = fileName.replace(/\.md$/, '');
-      return await getArticle(id);
-    })
-  );
+  try {
+    const fileNames = fs.readdirSync(articlesDirectory);
+    const allArticlesData = await Promise.all(
+      fileNames
+        .filter(fileName => fileName.endsWith('.md'))
+        .map(async (fileName) => {
+          try {
+            const id = fileName.replace(/\.md$/, '');
+            return await getArticle(id);
+          } catch (error) {
+            console.error(`Error loading article ${fileName}:`, error);
+            return null;
+          }
+        })
+    );
 
-  // Sort posts by date
-  return allArticlesData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
-    }
-  });
+    // Filter out any null entries and sort by date
+    return allArticlesData
+      .filter((article): article is ArticleData => article !== null)
+      .sort((a, b) => {
+        if (a.date < b.date) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+  } catch (error) {
+    console.error('Error loading articles:', error);
+    return [];
+  }
 } 

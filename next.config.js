@@ -1,15 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
   reactStrictMode: true,
+  images: {
+    unoptimized: false,
+    domains: ['localhost']
+  },
   trailingSlash: true,
-  distDir: 'out',
   typescript: {
     ignoreBuildErrors: true,
   },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.md$/,
+      use: 'raw-loader'
+    });
+    return config;
+  }
 };
 
 module.exports = nextConfig; 
