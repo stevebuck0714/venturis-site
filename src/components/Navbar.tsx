@@ -1,6 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className="w-full py-4 px-6 bg-gray-50 shadow-sm">
       <div className="max-w-[90rem] mx-auto flex justify-between items-center">
@@ -35,6 +37,4 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
-
-export default Navbar; 
+} 

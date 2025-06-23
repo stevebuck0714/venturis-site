@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
-export default function Home() {
+function AnimatedWords() {
   const [activeWord, setActiveWord] = useState(0);
 
   useEffect(() => {
@@ -15,6 +15,28 @@ export default function Home() {
   }, []);
 
   return (
+    <div className="h-16 relative">
+      <div className={`word-animation text-6xl text-black ${activeWord === 0 ? 'active' : ''}`}>
+        {'Monitoring'.split('').map((char, i) => (
+          <span key={i}>{char}</span>
+        ))}
+      </div>
+      <div className={`word-animation text-6xl text-black ${activeWord === 1 ? 'active' : ''}`}>
+        {'Management'.split('').map((char, i) => (
+          <span key={i}>{char}</span>
+        ))}
+      </div>
+      <div className={`word-animation text-6xl text-black ${activeWord === 2 ? 'active' : ''}`}>
+        {'Forecasting'.split('').map((char, i) => (
+          <span key={i}>{char}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
+  return (
     <main className="min-h-screen bg-white flex flex-col">
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-16">
@@ -23,23 +45,7 @@ export default function Home() {
               Institutional Grade Portfolio Solutions
             </h2>
             <div className="space-y-6">
-              <div className="h-16 relative">
-                <div className={`word-animation text-6xl text-black ${activeWord === 0 ? 'active' : ''}`}>
-                  {'Monitoring'.split('').map((char, i) => (
-                    <span key={i}>{char}</span>
-                  ))}
-                </div>
-                <div className={`word-animation text-6xl text-black ${activeWord === 1 ? 'active' : ''}`}>
-                  {'Management'.split('').map((char, i) => (
-                    <span key={i}>{char}</span>
-                  ))}
-                </div>
-                <div className={`word-animation text-6xl text-black ${activeWord === 2 ? 'active' : ''}`}>
-                  {'Forecasting'.split('').map((char, i) => (
-                    <span key={i}>{char}</span>
-                  ))}
-                </div>
-              </div>
+              <AnimatedWords />
               <div className="mt-16">
                 <div className="text-4xl font-light text-black my-16">enabling</div>
               </div>
