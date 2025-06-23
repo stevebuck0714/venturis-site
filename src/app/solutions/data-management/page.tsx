@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,7 +9,7 @@ export default function DataManagementPage() {
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-16">
           <h1 className="text-6xl font-light text-blue-900 mb-12">
-            Venturis Connex - Unstructured Data Ingestion
+            Data Management
           </h1>
           
           <div className="grid grid-cols-1 gap-8">
