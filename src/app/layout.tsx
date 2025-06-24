@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Layout from "@/components/Layout";
+import { ClientProvider } from "@/components/ClientContext";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Venturis Financial Systems",
-  description: "Enterprise software solutions for private markets",
+  title: "Pictet",
+  description: "Welcome to Pictet",
 };
 
 export default function RootLayout({
@@ -23,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={`${inter.className} bg-gray-50`}>
+        <ClientProvider>
+          <Layout>{children}</Layout>
+        </ClientProvider>
       </body>
     </html>
   );
