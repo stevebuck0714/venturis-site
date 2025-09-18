@@ -21,8 +21,8 @@ export default function AboutPage() {
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Leadership Team</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Alex Gonthier - CEO */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
+            {/* Alex Gonthier - Chairman */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-w-3 aspect-h-2">
                 <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
@@ -32,32 +32,12 @@ export default function AboutPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Alex Gonthier</h3>
-                <p className="text-blue-600 font-medium mb-4">Chief Executive Officer</p>
+                <p className="text-blue-600 font-medium mb-4">Chairman</p>
                 <p className="text-gray-600">
-                  As CEO, Alex brings extensive experience in financial technology and leadership. 
+                  As Chairman, Alex brings extensive experience in financial technology and leadership. 
                   His vision drives Venturis's mission to revolutionize investment management through 
                   innovative technology solutions. With a background in both finance and technology, 
                   Alex leads the company's strategic direction and growth initiatives.
-                </p>
-              </div>
-            </div>
-
-            {/* Will Rossiter - President */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-3 aspect-h-2">
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  {/* Placeholder for Will's image */}
-                  <span className="text-gray-400">Photo</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Will Rossiter</h3>
-                <p className="text-blue-600 font-medium mb-4">President</p>
-                <p className="text-gray-600">
-                  Will oversees the company's operations and execution of our strategic vision. 
-                  His leadership ensures that Venturis delivers exceptional value to our clients 
-                  while maintaining operational excellence. Will's expertise in financial markets 
-                  and technology implementation guides our product development and client success strategies.
                 </p>
               </div>
             </div>
@@ -82,22 +62,44 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Julien Salanon - Head of Marketing */}
+            {/* Arash Sorouchyari - EU Director Sales and Strategy */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="aspect-w-3 aspect-h-2">
                 <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  {/* Placeholder for Julien's image */}
+                  {/* Placeholder for Arash's image */}
                   <span className="text-gray-400">Photo</span>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Julien Salanon</h3>
-                <p className="text-blue-600 font-medium mb-4">Head of Marketing</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Arash Sorouchyari</h3>
+                <p className="text-blue-600 font-medium mb-4">EU Director Sales and Strategy</p>
                 <p className="text-gray-600">
-                  Julien leads our marketing initiatives, focusing on building the Venturis brand and 
-                  communicating our value proposition to the market. His expertise in financial technology 
-                  marketing helps us connect with our target audience and showcase how our solutions address 
-                  the evolving needs of investment firms.
+                  As EU Director Sales and Strategy, Arash leads Venturis's European operations and strategic 
+                  initiatives. With extensive experience in financial services and business development across 
+                  European markets, Arash drives client relationships and market expansion strategies. His deep 
+                  understanding of the European investment landscape enables us to deliver tailored solutions 
+                  that meet the unique needs of our European clients.
+                </p>
+              </div>
+            </div>
+
+            {/* David Nemeshazy - Chief Technical Officer */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="aspect-w-3 aspect-h-2">
+                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
+                  {/* Placeholder for David's image */}
+                  <span className="text-gray-400">Photo</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">David Nemeshazy</h3>
+                <p className="text-blue-600 font-medium mb-4">Chief Technical Officer</p>
+                <p className="text-gray-600">
+                  As Chief Technical Officer, David oversees Venturis's technology infrastructure and engineering 
+                  excellence. With deep expertise in software architecture and financial systems, David ensures 
+                  our platform delivers robust, scalable, and secure solutions. His technical leadership drives 
+                  innovation in areas such as machine learning, data analytics, and cloud infrastructure, 
+                  enabling us to stay at the forefront of fintech innovation.
                 </p>
               </div>
             </div>

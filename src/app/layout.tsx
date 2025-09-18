@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/Layout";
-import { ClientProvider } from "@/components/ClientContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Pictet",
-  description: "Welcome to Pictet",
+  title: "Venturis Financial",
+  description: "Accelerating Your Private Capital",
 };
 
 export default function RootLayout({
@@ -18,10 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50`}>
-        <ClientProvider>
-          <Layout>{children}</Layout>
-        </ClientProvider>
+      <body className={`${inter.className} bg-white`}>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
