@@ -10,6 +10,61 @@ export default function ClientSolutionsPage() {
             Client Solutions
           </h1>
           
+          {/* Three horizontal sub-containers with arrows */}
+          <div className="flex flex-col lg:flex-row items-center justify-center mb-16 gap-8">
+            {/* Container 1 */}
+            <div className="w-full lg:w-80 bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border border-blue-200 text-center">
+              <div className="mb-4">
+                <svg className="w-16 h-16 mx-auto text-blue-900" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm0 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1v-2z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-blue-900 mb-3">AI Assisted Personalization</h3>
+              <p className="text-gray-700">Intelligent personalization engine that delivers tailored investment recommendations and insights</p>
+            </div>
+            
+            {/* Arrow 1 */}
+            <div className="flex-shrink-0">
+              <svg className="w-8 h-8 text-blue-600 transform lg:rotate-0 rotate-90" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+              </svg>
+            </div>
+            
+            {/* Container 2 */}
+            <div className="w-full lg:w-80 bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border border-green-200 text-center">
+              <div className="mb-4">
+                <svg className="w-16 h-16 mx-auto text-green-900" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-green-900 mb-3">Proactive Portfolio Recommendations</h3>
+              <p className="text-gray-700">Intelligent recommendation system that proactively identifies optimal investment opportunities based on client profiles</p>
+            </div>
+            
+            {/* Arrow 2 */}
+            <div className="flex-shrink-0">
+              <svg className="w-8 h-8 text-blue-600 transform lg:rotate-0 rotate-90" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+              </svg>
+            </div>
+            
+            {/* Container 3 */}
+            <div className="w-full lg:w-80 bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border border-purple-200 text-center">
+              <div className="mb-4">
+                <svg className="w-16 h-16 mx-auto text-purple-900" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-purple-900 mb-3">Transaction Platform</h3>
+              <p className="text-gray-700">Secondary market platform enabling liquidity and peer-to-peer transactions for alternative assets</p>
+            </div>
+          </div>
+          
+          {/* AI Assisted Personalization Header */}
+          <h2 className="text-4xl font-light text-blue-900 mb-8">
+            AI Assisted Personalization
+          </h2>
+          
           <div className="grid grid-cols-1 gap-16">
             <section>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
@@ -21,7 +76,7 @@ export default function ClientSolutionsPage() {
               </p>
               
               <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center font-bold italic">
-                You need to ask this answer this critical question: 
+                You need to ask this critical question: 
                 Is your bank really prepared to profit from offering private equity? 
               </p>
               
