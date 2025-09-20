@@ -33,8 +33,6 @@ export default function PrivacyPolicyPage() {
               <li>Gramm-Leach-Bliley Act (GLBA)</li>
               <li>California Consumer Privacy Act (CCPA)</li>
               <li>SEC Regulation S-P (Privacy of Consumer Financial Information)</li>
-              <li>Fair Credit Reporting Act (FCRA)</li>
-              <li>Payment Card Industry Data Security Standard (PCI DSS)</li>
             </ul>
           </section>
 
@@ -44,7 +42,6 @@ export default function PrivacyPolicyPage() {
               We collect and process the following types of information:
             </p>
             <ul className="list-disc pl-6 mt-2 text-gray-600">
-              <li>Personal identification information (name, email, phone number)</li>
               <li>Professional information (company name, role, business address)</li>
               <li>Financial data (transaction records, investment portfolios, account information)</li>
               <li>Technical data (IP address, browser type, device information)</li>
@@ -92,23 +89,9 @@ export default function PrivacyPolicyPage() {
             </ul>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Your Rights</h2>
-            <p className="text-gray-600">
-              You have the following rights regarding your personal data:
-            </p>
-            <ul className="list-disc pl-6 mt-2 text-gray-600">
-              <li>Right to access your personal data</li>
-              <li>Right to rectification of inaccurate data</li>
-              <li>Right to erasure ("right to be forgotten")</li>
-              <li>Right to data portability</li>
-              <li>Right to object to processing</li>
-              <li>Right to restrict processing</li>
-            </ul>
-          </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Data Retention</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">7. Data Retention</h2>
             <p className="text-gray-600">
               We retain personal data for as long as necessary to:
             </p>
@@ -124,27 +107,15 @@ export default function PrivacyPolicyPage() {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Third-Party Service Providers</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">8. Third-Party Service Providers</h2>
             <p className="text-gray-600">
               We may share data with trusted third parties who assist us in operating our platform, conducting business, or servicing you. All third-party providers are contractually bound to protect your data with the same level of security as we do.
             </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">10. Contact Information</h2>
-            <p className="text-gray-600">
-              For privacy-related inquiries or to exercise your rights, contact our Data Protection Officer:
-            </p>
-            <div className="mt-2 text-gray-600">
-              <p>Email: privacy@venturisfinancial.com</p>
-              <p>For EU residents:</p>
-              <p>EU Representative: [EU Representative Name]</p>
-              <p>Email: eu-privacy@venturisfinancial.com</p>
-            </div>
-          </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">11. Updates to This Policy</h2>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">9. Updates to This Policy</h2>
             <p className="text-gray-600">
               We may update this Privacy Policy periodically to reflect changes in our practices or regulatory requirements. We will notify you of any material changes and obtain consent where required by law.
             </p>

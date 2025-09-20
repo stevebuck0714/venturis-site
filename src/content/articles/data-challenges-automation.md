@@ -1,7 +1,7 @@
 ---
 title: "Allocator Data Challenges & Automation: Why Legacy Tools No Longer Meet the Moment"
 excerpt: "How automation is transforming data management for capital allocators in private markets"
-date: "2024-03-22"
+date: "2024-04-16"
 author: "Venturis Team"
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Portfolio Construction"
 excerpt: "Utilizing Regression Analysis, Neural Networks, and ML for Accurate Portfolio Construction and Ongoing Updates"
-date: "2024-03-22"
+date: "2024-06-12"
 author: "Venturis Team"
 ---
 

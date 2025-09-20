@@ -1,7 +1,7 @@
 ---
 title: "Venturis Secondary Market Platform"
 excerpt: "Unlocking Liquidity in Private Markets for Retail Investors"
-date: "2024-03-22"
+date: "2024-03-25"
 author: "Venturis Team"
 ---
 

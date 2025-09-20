@@ -63,16 +63,6 @@ export default function SecurityPage() {
             </ul>
           </section>
 
-          <section>
-            <h2 className="text-2xl font-medium text-blue-900 mb-6">Security Contact</h2>
-            <p className="text-gray-600 mb-6">
-              For security-related inquiries or to report potential vulnerabilities, please contact our security team:
-            </p>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-gray-700 font-medium">Email: security@venturisfinancial.com</p>
-              <p className="text-gray-600 mt-2">Response time: Within 24 hours</p>
-            </div>
-          </section>
         </div>
       </div>
     </div>

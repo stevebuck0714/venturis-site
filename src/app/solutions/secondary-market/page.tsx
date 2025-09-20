@@ -65,32 +65,47 @@ export default function ClientSolutionsPage() {
             AI Assisted Personalization
           </h2>
           
-          <div className="grid grid-cols-1 gap-16">
+          <div className="grid grid-cols-1 gap-12">
             <section>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
                 Client Solutions is designed to address the unique needs of wealth management firms serving Ultra High Net Worth individuals and families. Our comprehensive platform brings together portfolio management, client engagement, and innovative investment solutions in one integrated environment.
               </p>
               
-              <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center font-bold italic">
-                You need to deliver premium digital experiences that deepen client relationships that drive interest and engagement.
-              </p>
-              
-              <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center font-bold italic">
-                You need to ask this critical question: 
-                Is your bank really prepared to profit from offering private equity? 
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">Digital Experience Imperative</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    You need to deliver premium digital experiences that deepen client relationships and drive interest and engagement.
+                  </p>
+                </div>
+                
+                <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
+                  <h3 className="text-2xl font-semibold text-orange-900 mb-4">Critical Strategic Question</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                    Is your bank really prepared to profit from offering private equity?
+                  </p>
+                </div>
+              </div>
               
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
                 To answer these questions you need to be able to offer and track the right value proposition to each of your clients across the entirety of your addressable client market, UHNI and institutions.
               </p>
               
-              <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center font-bold italic">
-                Build elegant, personalized mobile and web applications that give HNW, UHNW, and institutional clients full transparency and control.
-              </p>
-              
-              <p className="text-xl text-gray-700 leading-relaxed mb-8 text-center font-bold italic">
-                Foster meaningful relationships by enabling easy collaboration with relationship managers and delivering AI-powered insights on a personalized basis to each client.
-              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+                  <h3 className="text-2xl font-semibold text-green-900 mb-4">Elegant Client Applications</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Build elegant, personalized mobile and web applications that give HNW, UHNW, and institutional clients full transparency and control.
+                  </p>
+                </div>
+                
+                <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                  <h3 className="text-2xl font-semibold text-purple-900 mb-4">AI-Powered Relationships</h3>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    Foster meaningful relationships by enabling easy collaboration with relationship managers and delivering AI-powered insights on a personalized basis to each client.
+                  </p>
+                </div>
+              </div>
               
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
                 From portfolio construction and monitoring to client communication and alternative investment access, Client Solutions provides the technology infrastructure that modern wealth management firms need to compete and thrive in today's market.
@@ -102,7 +117,7 @@ export default function ClientSolutionsPage() {
                 Interactive Wealth Planning
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                "How would this new investment affect my portfolio?" This is a question I hear frequently from clients considering alternative investments. Our interactive portfolio simulation tools provide immediate answers, showing exactly how a proposed private equity investment would impact overall portfolio performance, risk profile, and cash flow projections.
+                "I have $3 million in investable assets. I want to be able to receive $250,000 each year beginning in year six while maintaining my wealth. What should my portfolio composition look like?" This is a question Private Bankers hear frequently from clients considering alternative investments. Our interactive portfolio simulation tools provide immediate answers, showing exactly how a proposed private equity investment would impact overall portfolio performance, risk profile, and cash flow projections.
               </p>
               <div className="grid grid-cols-2 gap-8 mt-12">
                 <div className="bg-gray-50 p-8 rounded-lg">
@@ -261,12 +276,6 @@ export default function ClientSolutionsPage() {
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                       </svg>
                       Legal & Compliance Workflow: Integrated subscription transfer and tax handling
-                    </li>
-                    <li className="flex items-start">
-                      <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                      </svg>
-                      Liquidity Window Configuration: Managers can enable time-bound liquidity events
                     </li>
                   </ul>
                 </div>

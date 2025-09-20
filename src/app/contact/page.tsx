@@ -10,9 +10,35 @@ export default function ContactPage() {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:steve.buck@venturisfinancial?subject=Contact Request from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.name}%0D%0ACompany: ${formData.company}%0D%0AEmail: ${formData.email}`;
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', company: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -30,6 +56,18 @@ export default function ContactPage() {
           <p className="text-gray-600 mb-12">
             We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.
           </p>
+
+          {submitStatus === 'success' && (
+            <div className="bg-green-50 border border-green-200 rounded-md p-4 mb-6">
+              <p className="text-green-800">Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+            </div>
+          )}
+
+          {submitStatus === 'error' && (
+            <div className="bg-red-50 border border-red-200 rounded-md p-4 mb-6">
+              <p className="text-red-800">Sorry, there was an error sending your message. Please try again or contact us directly.</p>
+            </div>
+          )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -94,9 +132,10 @@ export default function ContactPage() {
             <div>
               <button
                 type="submit"
-                className="w-full bg-blue-900 text-white py-3 px-6 rounded-md hover:bg-blue-800 transition-colors"
+                disabled={isSubmitting}
+                className="w-full bg-blue-900 text-white py-3 px-6 rounded-md hover:bg-blue-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </button>
             </div>
           </form>

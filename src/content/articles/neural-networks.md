@@ -1,7 +1,7 @@
 ---
 title: "Utilizing Regression Analysis, Neural Networks, and ML for Accurate Fund Forecasting and Commitment Pacing"
 excerpt: "How advanced analytics and machine learning are revolutionizing fund forecasting and commitment pacing in private markets"
-date: "2024-03-22"
+date: "2024-11-08"
 author: "Venturis Team"
 ---
 

@@ -10,13 +10,16 @@ export default function WealthAdvisoryPage() {
             Wealth Advisory Solutions
           </h1>
           
-          <div className="grid grid-cols-1 gap-16">
+          <div className="grid grid-cols-1 gap-12">
             <section>
               <h2 className="text-4xl font-light text-blue-900 mb-8">
                 Wealth Advisory Challenges
               </h2>
-              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+              <p className="text-xl text-gray-700 leading-relaxed mb-4">
                 Do you experience these pain points with your Wealth Advisory teams?
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                Modern wealth advisory faces unprecedented complexity as client expectations evolve rapidly while regulatory requirements intensify. These systemic challenges create operational bottlenecks that directly impact advisor productivity and client satisfaction, ultimately constraining revenue growth and competitive positioning.
               </p>
               
               {/* Wealth Advisory Challenges - Icon-based cards */}
@@ -90,8 +93,65 @@ export default function WealthAdvisoryPage() {
 
             <section>
               <h2 className="text-4xl font-light text-blue-900 mb-8">
+                Industry Trends
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                The wealth management landscape is experiencing a fundamental shift driven by technological advancement and changing client demographics. Digital-native investors demand seamless, technology-enabled experiences while maintaining the human touch that defines premium advisory services.
+              </p>
+              
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-blue-900 mb-3">Rising Expectations</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Expectations for advisory services are rising overall, including the use of technological tools such as portfolio visualization and personalized investment recommendations delivered directly via e-banking apps.
+                    </p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 717 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-blue-900 mb-3">AI Adoption</h3>
+                    <div className="space-y-3">
+                      <p className="text-gray-700 leading-relaxed">
+                        <span className="text-2xl font-bold text-green-600">52%</span> of clients would welcome AI-driven investment advice
+                      </p>
+                      <p className="text-gray-700 leading-relaxed">
+                        <span className="text-2xl font-bold text-green-600">46%</span> would be open to AI-based portfolio analysis
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 616 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-blue-900 mb-3">Balanced Approach</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      Clients continue to value personal advice, but they increasingly expect personalization, transparency, and digital interaction as part of the overall package.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-4xl font-light text-blue-900 mb-8">
                 Effectively Use Technology to Empower your Wealth Advisors
               </h2>
+              <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                Transform your wealth advisory operations with intelligent technology that amplifies human expertise rather than replacing it. Our comprehensive platform integrates seamlessly into existing workflows, enabling advisors to focus on high-value relationship building while automating routine tasks and delivering superior client outcomes.
+              </p>
               
               {/* Solutions - Icon-based cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
@@ -100,7 +160,7 @@ export default function WealthAdvisoryPage() {
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                         <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
+                          <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 717 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
                         </svg>
                       </div>
                     </div>
@@ -132,7 +192,7 @@ export default function WealthAdvisoryPage() {
                     <div className="flex-shrink-0 mr-4">
                       <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                         <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                          <path d="M13 6a3 3 0 11-6 0 3 3 0 616 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
                         </svg>
                       </div>
                     </div>
@@ -170,19 +230,6 @@ export default function WealthAdvisoryPage() {
                 </p>
               </div>
 
-              {/* Key actionable items */}
-              <div className="bg-blue-900 text-white p-8 rounded-lg mb-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-xl font-bold mb-4">Proactive Portfolio Alerts</h3>
-                    <p className="text-lg">Proactively alert your Wealth Advisors to opportunities in their client portfolios</p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-4">Auto Portfolio Construction</h3>
-                    <p className="text-lg">Auto Construct a portfolio to meet the client's mandate, showing performance simulations and the resulting capital commitment, cashflow profile, risk profile etc. – all within the bank's investment universe</p>
-                  </div>
-                </div>
-              </div>
             </section>
 
             <section className="bg-blue-900 text-white p-16 rounded-lg">

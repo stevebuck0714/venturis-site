@@ -1,7 +1,7 @@
 ---
 title: "Common Pain Points in Private Asset Reporting: Why Traditional Methods Are Breaking Down"
 excerpt: "Exploring the challenges in private asset reporting and how automation is solving them"
-date: "2024-03-22"
+date: "2024-05-28"
 author: "Venturis Team"
 ---
 

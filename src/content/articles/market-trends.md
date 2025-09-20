@@ -1,7 +1,7 @@
 ---
 title: "Private Market Trends & AI Predictions: What's Shaping the Future as we begin 2025"
 excerpt: "Exploring how AI is transforming private markets and shaping investment decisions in 2025"
-date: "2025-01-01"
+date: "2025-04-20"
 author: "Venturis Team"
 ---
 

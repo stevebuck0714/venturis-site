@@ -13,7 +13,6 @@ const Footer = () => {
               <li><Link href="/about" className="text-gray-300 hover:text-white">About Us</Link></li>
               <li><Link href="/careers" className="text-gray-300 hover:text-white">Careers</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
-              <li><Link href="/press" className="text-gray-300 hover:text-white">Press</Link></li>
             </ul>
           </div>
 
@@ -24,7 +23,6 @@ const Footer = () => {
               <li><Link href="/solutions/investment-teams" className="text-gray-300 hover:text-white">Investment Management</Link></li>
               <li><Link href="/solutions/front-office" className="text-gray-300 hover:text-white">Wealth Advisory</Link></li>
               <li><Link href="/solutions/secondary-market" className="text-gray-300 hover:text-white">Client Solutions</Link></li>
-              <li><Link href="/platform" className="text-gray-300 hover:text-white">Platform</Link></li>
             </ul>
           </div>
 
@@ -33,7 +31,6 @@ const Footer = () => {
             <h3 className="font-semibold text-white mb-4">Resources</h3>
             <ul className="space-y-2">
               <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link href="/insights" className="text-gray-300 hover:text-white">Insights</Link></li>
               <li><Link href="/documentation" className="text-gray-300 hover:text-white">Documentation</Link></li>
               <li><Link href="/support" className="text-gray-300 hover:text-white">Support</Link></li>
             </ul>
@@ -46,19 +43,14 @@ const Footer = () => {
               <li><Link href="/legal/privacy" className="text-gray-300 hover:text-white">Privacy Policy</Link></li>
               <li><Link href="/legal/terms" className="text-gray-300 hover:text-white">Terms of Service</Link></li>
               <li><Link href="/security" className="text-gray-300 hover:text-white">Security</Link></li>
-              <li><Link href="/security/compliance" className="text-gray-300 hover:text-white">Compliance</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Copyright and Social Links */}
         <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 mb-4 md:mb-0">© 2025 Venturis. All rights reserved.</p>
-            <div className="flex space-x-4">
-              <Link href="#" className="text-gray-300 hover:text-white">Twitter</Link>
-              <Link href="#" className="text-gray-300 hover:text-white">LinkedIn</Link>
-            </div>
+          <div className="flex flex-col md:flex-row justify-center items-center">
+            <p className="text-gray-300">© 2025 Venturis. All rights reserved.</p>
           </div>
         </div>
       </div>
