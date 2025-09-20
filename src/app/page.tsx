@@ -98,7 +98,7 @@ export default function Home() {
           <h2 className="text-6xl font-light text-blue-900 mb-8">Solutions</h2>
           
           <p className="text-2xl text-gray-700 leading-relaxed mb-12">
-            We leverage artificial intelligence and machine learning solve complex data challenges and improve portfolio performance and client engagement.
+            We leverage artificial intelligence and machine learning to solve complex data challenges and improve portfolio performance and client engagement.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
