@@ -320,9 +320,11 @@
 .article-box {
   flex: 0 0 auto;
   width: 500px;
+  height: 220px;
   padding: 2rem;
   background: white;
   transition: transform 0.2s ease;
+  white-space: normal;
 }
 
 .article-box:hover {
