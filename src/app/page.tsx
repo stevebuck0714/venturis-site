@@ -3,16 +3,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+const words = [
+  'Portfolio Construction',
+  'Private Fund Modeling and Monitoring',
+  'Advanced Wealth Advisory Support',
+  'Enhanced Client Engagement'
+];
+
 export default function Home() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentLetterPosition, setCurrentLetterPosition] = useState(0);
-
-  const words = [
-    'Portfolio Construction',
-    'Private Fund Modeling and Monitoring',
-    'Advanced Wealth Advisory Support',
-    'Enhanced Client Engagement'
-  ];
 
   useEffect(() => {
     const letterInterval = setInterval(() => {
@@ -31,7 +31,7 @@ export default function Home() {
     }, 100);
 
     return () => clearInterval(letterInterval);
-  }, [currentWordIndex, words]);
+  }, [currentWordIndex]);
 
   return (
     <main className="min-h-screen bg-white">
