@@ -48,15 +48,29 @@ export async function POST(request: NextRequest) {
     }
 
     // Create transporter
+    console.log('API: Creating SMTP transporter...');
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.gmail.com',
+      host: process.env.SMTP_HOST || 'smtp-mail.outlook.com',
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: false, // true for 465, false for other ports
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      tls: {
+        ciphers: 'SSLv3'
+      }
     });
+    
+    // Test the connection
+    console.log('API: Testing SMTP connection...');
+    try {
+      await transporter.verify();
+      console.log('API: SMTP connection verified successfully');
+    } catch (verifyError) {
+      console.error('API: SMTP verification failed:', verifyError);
+      throw new Error(`SMTP connection failed: ${verifyError instanceof Error ? verifyError.message : 'Unknown error'}`);
+    }
 
     // Admin notification email
     const adminMailOptions = {
