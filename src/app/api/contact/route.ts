@@ -62,14 +62,19 @@ export async function POST(request: NextRequest) {
       }
     });
     
-    // Test the connection
+    // Test the connection (but continue if Office 365 auth is still disabled)
     console.log('API: Testing SMTP connection...');
     try {
       await transporter.verify();
       console.log('API: SMTP connection verified successfully');
     } catch (verifyError) {
       console.error('API: SMTP verification failed:', verifyError);
-      throw new Error(`SMTP connection failed: ${verifyError instanceof Error ? verifyError.message : 'Unknown error'}`);
+      // For Office 365 SMTP AUTH issues, log the error but try sending anyway
+      if (verifyError instanceof Error && verifyError.message.includes('SmtpClientAuthentication is disabled')) {
+        console.log('API: Office 365 SMTP AUTH disabled - will attempt to send emails anyway and see if they work');
+      } else {
+        throw new Error(`SMTP connection failed: ${verifyError instanceof Error ? verifyError.message : 'Unknown error'}`);
+      }
     }
 
     // Admin notification email
