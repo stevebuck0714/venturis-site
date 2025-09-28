@@ -3,10 +3,13 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('API: Received POST request to /api/contact');
     const formData = await request.json();
+    console.log('API: Form data received:', { ...formData, SMTP_PASS: '[REDACTED]' });
     
     // Handle both contact form and request-demo form
     const isContactForm = formData.name && !formData.firstName;
+    console.log('API: Is contact form:', isContactForm);
     
     if (isContactForm) {
       // Contact form validation
@@ -29,6 +32,12 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if email credentials are configured
+    console.log('API: Checking environment variables...');
+    console.log('API: SMTP_USER exists:', !!process.env.SMTP_USER);
+    console.log('API: SMTP_PASS exists:', !!process.env.SMTP_PASS);
+    console.log('API: SMTP_HOST:', process.env.SMTP_HOST);
+    console.log('API: SMTP_PORT:', process.env.SMTP_PORT);
+    
     if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
       console.log('Email credentials not configured - simulating email send');
       // For development without email setup, just return success
@@ -183,20 +192,33 @@ export async function POST(request: NextRequest) {
     };
 
     // Send both emails
+    console.log('API: Attempting to send emails...');
     await Promise.all([
       transporter.sendMail(adminMailOptions),
       transporter.sendMail(userMailOptions)
     ]);
-
+    
+    console.log('API: Emails sent successfully');
     return NextResponse.json({ 
       success: true, 
       message: 'Demo request submitted successfully' 
     });
 
   } catch (error) {
-    console.error('Email sending error:', error);
+    console.error('API: Email sending error:', error);
+    // Return more detailed error information
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    console.error('API: Error details:', {
+      name: error instanceof Error ? error.name : 'Unknown',
+      message: errorMessage,
+      stack: error instanceof Error ? error.stack : 'No stack trace'
+    });
+    
     return NextResponse.json(
-      { error: 'Failed to send demo request. Please try again.' },
+      { 
+        error: 'Failed to send demo request. Please try again.',
+        details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
+      },
       { status: 500 }
     );
   }
