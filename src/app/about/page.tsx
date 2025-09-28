@@ -9,111 +9,90 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">About Venturis</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We're a team of financial technology experts dedicated to transforming how investment firms operate, 
-            making complex financial operations simpler and more efficient.
-          </p>
-        </div>
-
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Leadership Team</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-7xl mx-auto">
-            {/* Alex Gonthier - Chairman */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-3 aspect-h-2">
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  {/* Placeholder for Alex's image */}
-                  <span className="text-gray-400">Photo</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Alex Gonthier</h3>
-                <p className="text-blue-600 font-medium mb-4">Chairman</p>
-                <p className="text-gray-600">
-                  As Chairman, Alex brings extensive experience in financial technology and leadership. 
-                  His vision drives Venturis's mission to revolutionize investment management through 
-                  innovative technology solutions. With a background in both finance and technology, 
-                  Alex leads the company's strategic direction and growth initiatives.
-                </p>
-              </div>
-            </div>
-
-            {/* Steve Buck - Founder & Head of Product Development */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-3 aspect-h-2">
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  {/* Placeholder for Steve's image */}
-                  <span className="text-gray-400">Photo</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Steve Buck</h3>
-                <p className="text-blue-600 font-medium mb-4">Founder & Head of Product Development</p>
-                <p className="text-gray-600">
-                  As Founder and Head of Product Development, Steve drives the technical innovation at Venturis. 
-                  His deep understanding of both financial markets and software development enables us to create 
-                  cutting-edge solutions that address real-world challenges in investment management. Steve's 
-                  vision has been instrumental in shaping our product roadmap and technical architecture.
-                </p>
-              </div>
-            </div>
-
-            {/* Arash Sorouchyari - EU Director Sales and Strategy */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-3 aspect-h-2">
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  {/* Placeholder for Arash's image */}
-                  <span className="text-gray-400">Photo</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Arash Sorouchyari</h3>
-                <p className="text-blue-600 font-medium mb-4">EU Director Sales and Strategy</p>
-                <p className="text-gray-600">
-                  As EU Director Sales and Strategy, Arash leads Venturis's European operations and strategic 
-                  initiatives. With extensive experience in financial services and business development across 
-                  European markets, Arash drives client relationships and market expansion strategies. His deep 
-                  understanding of the European investment landscape enables us to deliver tailored solutions 
-                  that meet the unique needs of our European clients.
-                </p>
-              </div>
-            </div>
-
-            {/* David Nemeshazy - Chief Technical Officer */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="aspect-w-3 aspect-h-2">
-                <div className="w-full h-64 bg-gray-200 flex items-center justify-center">
-                  {/* Placeholder for David's image */}
-                  <span className="text-gray-400">Photo</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">David Nemeshazy</h3>
-                <p className="text-blue-600 font-medium mb-4">Chief Technical Officer</p>
-                <p className="text-gray-600">
-                  As Chief Technical Officer, David oversees Venturis's technology infrastructure and engineering 
-                  excellence. With deep expertise in software architecture and financial systems, David ensures 
-                  our platform delivers robust, scalable, and secure solutions. His technical leadership drives 
-                  innovation in areas such as machine learning, data analytics, and cloud infrastructure, 
-                  enabling us to stay at the forefront of fintech innovation.
-                </p>
-              </div>
-            </div>
+      <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div className="space-y-12">
+          {/* Header */}
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-6">About Venturis</h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              We're a team of financial technology experts with over 50 years of private markets experience dedicated to transforming how investment firms operate, making complex financial operations simpler and more efficient.
+            </p>
           </div>
-        </div>
 
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
-          <p className="text-xl text-gray-600">
-            At Venturis, we're committed to empowering investment firms with innovative technology 
-            solutions that streamline operations, enhance decision-making, and drive growth. Our 
-            platform combines cutting-edge technology with deep industry expertise to deliver 
-            exceptional value to our clients.
-          </p>
+          {/* Built with allocators */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Built with allocators, for allocators</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Venturis was developed in partnership with two multi-billion-dollar allocators. From day one, we've co-designed workflows around real investment committee needs—portfolio construction, commitment pacing, liquidity planning, performance analytics, and investor reporting—so the product reflects how leading allocators actually work.
+            </p>
+          </div>
+
+          {/* What we do */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">What we do</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              We unify alternative-asset data, automate fund and portfolio forecasting and monitoring, and deliver portfolio-level insight that's timely, accurate, and actionable—without forcing teams to live in spreadsheets or wait for quarter-end closes. Venturis connects to the systems you already use, ingests transactional detail, and turns it into live forecasts, risk flags, and decision-ready dashboards for funds, portfolios, entities, and investors.
+            </p>
+          </div>
+
+          {/* Why allocators choose Venturis */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Why allocators choose Venturis</h2>
+            <ul className="text-lg text-gray-600 space-y-3">
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">•</span>
+                <span><strong>Allocator-grade accuracy:</strong> Audit-linked data flows and controls designed to stand up to IC, LPs, and auditors.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">•</span>
+                <span><strong>Live projections, not lagging reports:</strong> Mid-quarter ingestion keeps pacing, liquidity, and performance views current.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">•</span>
+                <span><strong>Depth without complexity:</strong> Advanced analytics (PME variants, J-curves, scenario modeling) wrapped in a clean, intuitive UI.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">•</span>
+                <span><strong>Enterprise integration:</strong> Works alongside leading fund-accounting and portfolio-monitoring stacks to reduce manual recs and rekeying.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-blue-600 mr-3">•</span>
+                <span><strong>Security by design:</strong> Cloud-native architecture with rigorous access controls and data governance.</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Our experience */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Our experience</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Our leadership brings decades across private-markets technology, wealth platforms, and large-scale SaaS engineering. We've built and scaled systems used by global banks and institutional allocators, led cloud transformations, and shipped products that handle mission-critical financial workflows at scale. That depth shows up in the details—from our data model and controls to how fast your team gets to value.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Mission</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              At Venturis, we're committed to empowering investment firms with innovative technology solutions that streamline operations, enhance decision-making, and drive growth. Our platform combines cutting-edge technology with deep industry expertise to deliver exceptional value to our clients.
+            </p>
+          </div>
+
+          {/* How we work */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How we work</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Implementation is collaborative and practical. We align on your data sources, map your cash-flow conventions, and stand up production-ready dashboards quickly—so teams can move from static reports to proactive portfolio management in weeks, not quarters.
+            </p>
+          </div>
+
+          {/* The result */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">The result</h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Cleaner data. Faster answers. Stronger decisions. Venturis gives allocator teams the confidence and clarity to allocate with foresight.
+            </p>
+          </div>
         </div>
       </div>
     </div>

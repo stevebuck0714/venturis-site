@@ -552,7 +552,7 @@ export default function InvestmentTeamsPage() {
               <p className="text-xl leading-relaxed mb-8">
                 Let us show you how our platform can enhance your investment team's capabilities and streamline your operations.
               </p>
-              <Link href="/contact" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
+              <Link href="/request-demo" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
                 Schedule a Demo
               </Link>
             </section>

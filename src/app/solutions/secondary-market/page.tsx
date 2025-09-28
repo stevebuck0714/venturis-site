@@ -318,8 +318,8 @@ export default function ClientSolutionsPage() {
               <p className="text-xl leading-relaxed mb-8">
                 Discover how our Client Solutions platform can enhance client engagement and expand your alternative investment offerings.
               </p>
-              <Link href="/contact" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
-                Learn More
+              <Link href="/request-demo" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
+                Request a Demo
               </Link>
             </section>
           </div>

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Venturis Financial",
-  description: "Accelerating Your Private Capital",
+  description: "Private-Markets Intelligence",
 };
 
 export default function RootLayout({

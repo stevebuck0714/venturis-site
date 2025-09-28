@@ -239,7 +239,7 @@ export default function WealthAdvisoryPage() {
               <p className="text-xl leading-relaxed mb-8">
                 See how our wealth advisory solutions can empower your relationship managers and enhance client relationships.
               </p>
-              <Link href="/contact" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
+              <Link href="/request-demo" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
                 Request a Demo
               </Link>
             </section>

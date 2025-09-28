@@ -147,7 +147,7 @@ export default function DataManagementPage() {
               <p className="text-xl leading-relaxed mb-8">
                 Let us show you how Venturis Connex can streamline your data collection and management processes.
               </p>
-              <Link href="/contact" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
+              <Link href="/request-demo" className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-medium hover:bg-blue-50 transition-colors">
                 Schedule a Demo
               </Link>
             </section>

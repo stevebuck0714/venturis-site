@@ -3,35 +3,43 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const words = [
+// Define words array with explicit order
+const wordsList = [
   'Portfolio Construction',
-  'Private Fund Modeling and Monitoring',
+  'Commitment Pacing', 
+  'Fund and Portfolio Monitoring',
   'Advanced Wealth Advisory Support',
   'Enhanced Client Engagement'
 ];
 
+const words = wordsList;
+
 export default function Home() {
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentLetterPosition, setCurrentLetterPosition] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [currentWordIdx, setCurrentWordIdx] = useState(0);
+  const [currentCharIdx, setCurrentCharIdx] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const letterInterval = setInterval(() => {
-      setCurrentLetterPosition((prev) => {
-        if (prev < words[currentWordIndex].length - 1) {
-          return prev + 1;
-        } else {
-          clearInterval(letterInterval);
-          setTimeout(() => {
-            setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-            setCurrentLetterPosition(0);
-          }, 2000);
-          return prev;
-        }
-      });
+    const timeout = setTimeout(() => {
+      const currentWord = words[currentWordIdx];
+      
+      if (!isDeleting && currentCharIdx < currentWord.length) {
+        // Typing letters
+        setDisplayText(currentWord.substring(0, currentCharIdx + 1));
+        setCurrentCharIdx(currentCharIdx + 1);
+      } else if (!isDeleting && currentCharIdx === currentWord.length) {
+        // Finished typing, wait then move to next word
+        setTimeout(() => {
+          setCurrentWordIdx((currentWordIdx + 1) % words.length);
+          setCurrentCharIdx(0);
+          setDisplayText('');
+        }, 2000);
+      }
     }, 100);
 
-    return () => clearInterval(letterInterval);
-  }, [currentWordIndex]);
+    return () => clearTimeout(timeout);
+  }, [currentWordIdx, currentCharIdx, isDeleting]);
 
   return (
     <main className="min-h-screen bg-white">
@@ -39,16 +47,12 @@ export default function Home() {
         <section className="mb-16">
           <div className="text-left pt-8">
             <h1 className="text-6xl font-normal text-blue-900 mb-4 text-left">
-              Accelerating Your Private Capital
+              Intelligence for Private Markets
             </h1>
             <div className="min-h-[4rem] flex items-end mb-24">
               <span className="text-4xl font-light text-black mr-4 flex items-end">with&nbsp;&nbsp;</span>
               <div className="text-6xl font-normal text-black">
-                {words[currentWordIndex].slice(0, currentLetterPosition + 1).split('').map((letter, index) => (
-                  <span key={index}>
-                    {letter === ' ' ? '\u00A0' : letter}
-                  </span>
-                ))}
+                {displayText.replace(/ /g, '\u00A0')}
               </div>
             </div>
           </div>
@@ -71,7 +75,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Portfolio Construction</h3>
-                    <p className="text-lg text-gray-600">Reduced idle cash and improved portfolio performance through intelligent allocation strategies</p>
+                    <p className="text-lg text-gray-600">Reduced idle cash and improved portfolio performance through intelligent commitment pacing which updates on every data load. Track and Project portfolio performance, mandate adherence and projected drift from key financial metrics.</p>
                   </div>
                 </div>
 
@@ -83,7 +87,31 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Mandate Compliance</h3>
-                    <p className="text-lg text-gray-600">Adherence to investor mandates with automated monitoring and alerts</p>
+                    <p className="text-lg text-gray-600">Set, Track and Project adherence to investor mandates with automated monitoring and alerts. Easily see potential mandate drifts in time to make the necessary changes to the portfolio.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start group">
+                  <div className="flex-shrink-0 w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mr-8 group-hover:bg-indigo-200 transition-colors">
+                    <svg className="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Fund of Funds Management</h3>
+                    <p className="text-lg text-gray-600">Track and Project Fund of Funds Waterfalls for any portfolio. Set Fund of Funds management fees and incentive fees to view detailed actual and projected waterfalls outputs for investors and management.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start group">
+                  <div className="flex-shrink-0 w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mr-8 group-hover:bg-teal-200 transition-colors">
+                    <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Investor/Entity Reporting</h3>
+                    <p className="text-lg text-gray-600">Report on any Investor or Entity with detailed actual and projected performance on their private equity portfolios. Develop portfolio strategies and allocations in real time with your clients and visualize the impacts on their existing portfolios.</p>
                   </div>
                 </div>
 
@@ -95,7 +123,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Advisor Productivity</h3>
-                    <p className="text-lg text-gray-600">Increase productivity of your wealth advisors with AI-powered insights and automation</p>
+                    <p className="text-lg text-gray-600">Increase productivity of your wealth advisors with AI-powered insights and automation. With AI driven insights your Advisors can have real time intelligence on opportunities and or issues with their clients' portfolio</p>
                   </div>
                 </div>
 
@@ -107,7 +135,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">Client Personalization</h3>
-                    <p className="text-lg text-gray-600">Delivering personalized client interaction through advanced analytics and customization</p>
+                    <p className="text-lg text-gray-600">Delivering personalized client interaction through advanced analytics and customization. Provide your clients with information and suggestions tailored to their portfolio, their goals and their interest.</p>
                   </div>
                 </div>
 
@@ -117,7 +145,7 @@ export default function Home() {
         </section>
 
         {/* Solutions Section */}
-        <section className="mt-32 mb-16">
+        <section className="mt-16 mb-16">
           <div className="text-left">
             <h2 className="text-5xl font-light text-blue-900 mb-4">Solutions</h2>
             <p className="text-2xl text-gray-600 mb-12 max-w-4xl">
@@ -125,48 +153,57 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link href="/solutions/investment-teams" className="group">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow group-hover:bg-gray-50 text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-blue-200 transition-colors mx-auto">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Empowering Investment Teams</h3>
-                <p className="text-gray-600">Advanced analytics and portfolio management tools for private equity, venture capital, and fund managers</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow hover:bg-gray-50 text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 hover:bg-blue-200 transition-colors mx-auto">
+                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
               </div>
-            </Link>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Empowering Investment Teams</h3>
+              <p className="text-gray-600 mb-4">Advanced analytics and portfolio management tools for private equity, venture capital, and fund managers</p>
+              <div className="flex justify-end">
+                <Link href="/solutions/investment-teams" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                  Learn more... →
+                </Link>
+              </div>
+            </div>
 
-            <Link href="/solutions/front-office" className="group">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow group-hover:bg-gray-50 text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-green-200 transition-colors mx-auto">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Wealth Advisory</h3>
-                <p className="text-gray-600">Intelligent portfolio construction and client management solutions for wealth advisors and family offices</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow hover:bg-gray-50 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6 hover:bg-green-200 transition-colors mx-auto">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-            </Link>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Wealth Advisory</h3>
+              <p className="text-gray-600 mb-4">Intelligent portfolio construction and client management solutions for wealth advisors and family offices</p>
+              <div className="flex justify-end">
+                <Link href="/solutions/front-office" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                  Learn more... →
+                </Link>
+              </div>
+            </div>
 
-            <Link href="/solutions/secondary-market" className="group">
-              <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow group-hover:bg-gray-50 text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-purple-200 transition-colors mx-auto">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Client Solutions</h3>
-                <p className="text-gray-600">Enhanced client engagement and personalized investment solutions for wealth management firms</p>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow hover:bg-gray-50 text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6 hover:bg-purple-200 transition-colors mx-auto">
+                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
               </div>
-            </Link>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Client Solutions</h3>
+              <p className="text-gray-600 mb-4">Enhanced client engagement and personalized investment solutions for wealth management firms</p>
+              <div className="flex justify-end">
+                <Link href="/solutions/secondary-market" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                  Learn more... →
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
       </div>
 
       {/* Latest Insights Section */}
-      <section className="bg-gray-50 py-16 -mx-6 mt-16">
+      <section className="bg-gray-50 py-16 -mx-6 mt-8">
         <div className="max-w-[90rem] mx-auto px-6">
           <div className="text-left mb-12">
             <h2 className="text-5xl font-light text-blue-900 mb-4">Latest Insights</h2>
