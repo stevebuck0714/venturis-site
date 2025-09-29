@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request: NextRequest) {
   console.log('API: Function started');
   try {
-    console.log('API: Received POST request to /api/contact - Gmail SMTP ready!');
+    console.log('API: Received POST request to /api/contact - Gmail SMTP configured!');
     console.log('API: Environment variables loaded:', {
       SMTP_HOST: process.env.SMTP_HOST,
       SMTP_PORT: process.env.SMTP_PORT,
