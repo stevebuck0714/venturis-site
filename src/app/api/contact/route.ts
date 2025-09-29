@@ -233,10 +233,19 @@ export async function POST(request: NextRequest) {
       stack: error instanceof Error ? error.stack : 'No stack trace'
     });
     
+    // Log environment variables (without password) for debugging
+    console.error('API: Environment check:', {
+      SMTP_HOST: process.env.SMTP_HOST,
+      SMTP_PORT: process.env.SMTP_PORT,
+      SMTP_USER: process.env.SMTP_USER,
+      SMTP_PASS_LENGTH: process.env.SMTP_PASS?.length,
+      ADMIN_EMAIL: process.env.ADMIN_EMAIL
+    });
+    
     return NextResponse.json(
       { 
         error: 'Failed to send demo request. Please try again.',
-        details: process.env.NODE_ENV === 'development' ? errorMessage : undefined
+        details: errorMessage // Always return details for debugging
       },
       { status: 500 }
     );
