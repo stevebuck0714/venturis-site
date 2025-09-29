@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('API: Received POST request to /api/contact with Gmail SMTP configured');
+    console.log('API: Received POST request to /api/contact with corrected Gmail SMTP');
     const formData = await request.json();
     console.log('API: Form data received:', { ...formData, SMTP_PASS: '[REDACTED]' });
     
