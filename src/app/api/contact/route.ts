@@ -50,15 +50,15 @@ export async function POST(request: NextRequest) {
     // Create transporter
     console.log('API: Creating SMTP transporter...');
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp-mail.outlook.com',
-      port: parseInt(process.env.SMTP_PORT || '587'),
-      secure: false, // true for 465, false for other ports
+      host: process.env.SMTP_HOST || 'relay-hosting.secureserver.net',
+      port: parseInt(process.env.SMTP_PORT || '25'),
+      secure: false, // GoDaddy typically uses port 25 without SSL
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
       tls: {
-        ciphers: 'SSLv3'
+        rejectUnauthorized: false
       }
     });
     
