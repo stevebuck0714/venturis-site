@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
+  console.log('API: Function started');
   try {
     console.log('API: Received POST request to /api/contact - Gmail SMTP ready!');
     console.log('API: Environment variables loaded:', {
@@ -231,6 +232,7 @@ export async function POST(request: NextRequest) {
     });
 
   } catch (error) {
+    console.log('API: Caught error in try/catch');
     console.error('API: Email sending error:', error);
     // Return more detailed error information
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
