@@ -295,6 +295,9 @@ export default function InvestmentTeamsPage() {
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
                     Eliminate manual data entry errors and reduce time spent on data preparation, allowing your team to focus on analysis and strategic decision-making.
                   </p>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
+                    Venturis Connex automates the collection of your LP portals data daily. Connex downloads appropriate GP documents, examines the data as it is collected and applies the appropriate business rules to identify data exceptions. Connex can provide data in various formats and can push data to specific client data stores.
+                  </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                     <div>
@@ -357,6 +360,19 @@ export default function InvestmentTeamsPage() {
                       </ul>
                     </div>
                   </div>
+                  
+                  {/* Link to Venturis vs Excel page */}
+                  <div className="mt-8 pt-6 border-t border-gray-300 flex justify-end">
+                    <Link 
+                      href="/solutions/venturis-vs-excel" 
+                      className="inline-flex items-center text-blue-900 hover:text-blue-700 font-bold text-lg"
+                    >
+                      Venturis vs Excel
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </section>
@@ -386,6 +402,19 @@ export default function InvestmentTeamsPage() {
                   <p className="text-xl text-gray-700 mt-8">
                     Commitment Pacing Models: Continuously updates allocation plans based on changing fund cash flows and macro conditions.
                   </p>
+                  
+                  {/* Link to Why Choose Venturis page */}
+                  <div className="mt-8 pt-6 border-t border-gray-300 flex justify-end">
+                    <Link 
+                      href="/solutions/why-choose-venturis-portfolio-construction" 
+                      className="inline-flex items-center text-blue-900 hover:text-blue-700 font-bold text-lg"
+                    >
+                      Why Choose Venturis for Portfolio Construction
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </section>

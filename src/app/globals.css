@@ -56,6 +56,28 @@
       rgb(var(--background-start-rgb));
     font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    
+    /* Prevent horizontal scroll on mobile */
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    
+    /* Better touch targets */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -319,12 +341,26 @@
 
 .article-box {
   flex: 0 0 auto;
-  width: 500px;
-  height: 220px;
-  padding: 2rem;
+  width: 280px;
+  height: 200px;
+  padding: 1.5rem;
   background: white;
   transition: transform 0.2s ease;
   white-space: normal;
+}
+
+@media (min-width: 640px) {
+  .article-box {
+    width: 400px;
+    height: 220px;
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-box {
+    width: 500px;
+  }
 }
 
 .article-box:hover {

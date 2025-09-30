@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import StructuredData from '@/components/SEO/StructuredData';
 
 // Define words array with explicit order
 const wordsList = [
@@ -19,6 +20,76 @@ export default function Home() {
   const [currentWordIdx, setCurrentWordIdx] = useState(0);
   const [currentCharIdx, setCurrentCharIdx] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  // Structured data for the homepage
+  const homepageStructuredData = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': 'https://venturisfinancial.com/#webpage',
+      url: 'https://venturisfinancial.com',
+      name: 'Venturis - Intelligence for Private Markets',
+      description: 'Sophisticated intelligence and analytics for private markets, empowering investment teams with AI-driven portfolio construction and real-time decision-making tools.',
+      isPartOf: {
+        '@type': 'WebSite',
+        '@id': 'https://venturisfinancial.com/#website',
+      },
+      about: {
+        '@type': 'Thing',
+        name: 'Private Markets Intelligence',
+      },
+      mainEntity: {
+        '@type': 'SoftwareApplication',
+        name: 'Venturis Platform',
+        applicationCategory: 'BusinessApplication',
+        description: 'AI-powered platform for private markets intelligence, portfolio construction, and investment analytics.',
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': 'https://venturisfinancial.com/#service',
+      name: 'Private Markets Intelligence Platform',
+      description: 'Comprehensive platform providing portfolio construction, commitment pacing, mandate compliance, and advanced analytics for private markets.',
+      provider: {
+        '@type': 'Organization',
+        name: 'Venturis',
+        url: 'https://venturisfinancial.com',
+      },
+      serviceType: 'Financial Technology Platform',
+      category: 'Investment Management Software',
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Venturis Solutions',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Portfolio Construction',
+              description: 'AI-driven portfolio construction and commitment pacing tools',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Investment Analytics',
+              description: 'Advanced analytics and performance monitoring for private markets',
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Mandate Compliance',
+              description: 'Automated mandate compliance monitoring and reporting',
+            },
+          },
+        ],
+      },
+    },
+  ];
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -42,16 +113,18 @@ export default function Home() {
   }, [currentWordIdx, currentCharIdx, isDeleting]);
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-[90rem] mx-auto px-6 py-16">
+    <>
+      <StructuredData data={homepageStructuredData} />
+      <main className="min-h-screen bg-white">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 py-8 sm:py-16">
         <section className="mb-16">
           <div className="text-left pt-8">
-            <h1 className="text-6xl font-normal text-blue-900 mb-4 text-left">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-normal text-blue-900 mb-4 text-left leading-tight">
               Intelligence for Private Markets
             </h1>
-            <div className="min-h-[4rem] flex items-end mb-24">
-              <span className="text-4xl font-light text-black mr-4 flex items-end">with&nbsp;&nbsp;</span>
-              <div className="text-6xl font-normal text-black">
+            <div className="min-h-[3rem] sm:min-h-[4rem] flex flex-col sm:flex-row sm:items-end mb-12 sm:mb-24">
+              <span className="text-xl sm:text-2xl lg:text-4xl font-light text-black mb-2 sm:mb-0 sm:mr-4 flex items-end">with</span>
+              <div className="text-2xl sm:text-3xl lg:text-6xl font-normal text-black">
                 {displayText.replace(/ /g, '\u00A0')}
               </div>
             </div>
@@ -60,16 +133,16 @@ export default function Home() {
 
         {/* Enabling Section - 2x2 Grid */}
         <section className="mb-16">
-          <h2 className="text-5xl font-light text-blue-900 mb-12 text-left">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light text-blue-900 mb-8 sm:mb-12 text-left leading-tight">
             Enabling Data-driven decisions in real time
           </h2>
           <div className="bg-gray-50 py-16 -mx-6">
             <div className="max-w-[90rem] mx-auto px-6">
-              <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+              <div className="max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-20 gap-y-8 sm:gap-y-12">
                 
                 <div className="flex items-start group">
-                  <div className="flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-8 group-hover:bg-blue-200 transition-colors">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4 sm:mr-8 group-hover:bg-blue-200 transition-colors">
+                    <svg className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
@@ -147,12 +220,12 @@ export default function Home() {
         {/* Solutions Section */}
         <section className="mt-16 mb-16">
           <div className="text-left">
-            <h2 className="text-5xl font-light text-blue-900 mb-4">Solutions</h2>
-            <p className="text-2xl text-gray-600 mb-12 max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light text-blue-900 mb-4 leading-tight">Solutions</h2>
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-4xl leading-relaxed">
               Harness the power of artificial intelligence and machine learning to solve complex challenges in private capital and wealth management
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow hover:bg-gray-50 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6 hover:bg-blue-200 transition-colors mx-auto">
                 <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,8 +279,8 @@ export default function Home() {
       <section className="bg-gray-50 py-16 -mx-6 mt-8">
         <div className="max-w-[90rem] mx-auto px-6">
           <div className="text-left mb-12">
-            <h2 className="text-5xl font-light text-blue-900 mb-4">Latest Insights</h2>
-            <p className="text-2xl text-gray-600 whitespace-nowrap">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light text-blue-900 mb-4 leading-tight">Latest Insights</h2>
+            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed">
               Stay informed with our latest thinking on private capital markets, technology trends, and industry developments
             </p>
           </div>
@@ -305,5 +378,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+    </>
   );
 }
