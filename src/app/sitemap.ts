@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemapDisabled(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://venturis.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://venturisfinancial.com';
   const currentDate = new Date();
 
   // Static routes with their priorities and change frequencies
