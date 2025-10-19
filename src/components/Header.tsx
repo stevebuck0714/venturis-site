@@ -42,7 +42,7 @@ export default function Header() {
             Wealth Advisory
           </Link>
           <Link href="/solutions/secondary-market" className="text-sm xl:text-base text-gray-700 hover:text-blue-900 transition-colors">
-            Client Solutions
+            Investor Solutions
           </Link>
           
           <div 
@@ -145,7 +145,7 @@ export default function Header() {
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Client Solutions
+                      Investor Solutions
                     </Link>
                     
                     {/* Mobile Who We Serve Section */}

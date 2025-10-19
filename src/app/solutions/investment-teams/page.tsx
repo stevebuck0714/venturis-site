@@ -108,25 +108,25 @@ export default function InvestmentTeamsPage() {
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        Automated Data Collection
+                        Automated data collection
                       </li>
                       <li className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        API Integrations
+                        Data validation and cleaning
                       </li>
                       <li className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        Real-time market data feeds
+                        Market Data Integration
                       </li>
                       <li className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        Secure file transfer protocols
+                        API integrations with leading fund accounting systems
                       </li>
                     </ul>
                     <div className="flex justify-end mt-4">
@@ -178,29 +178,53 @@ export default function InvestmentTeamsPage() {
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        Automated data collection
+                        Detailed fund and portfolio KPI's
                       </li>
                       <li className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        Data validation and cleaning
+                        Portfolio Mandate monitoring
                       </li>
                       <li className="flex items-start">
                         <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                         </svg>
-                        Market Data Integration
-                      </li>
-                      <li className="flex items-start">
-                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                        </svg>
-                        API integrations with leading fund accounting systems
+                        Portfolio Cash Position Monitoring for current and projected portfolio cash
                       </li>
                     </ul>
                     <div className="flex justify-end mt-4">
                       <Link href="#investment-monitoring" className="text-blue-900 font-medium hover:text-blue-700">
+                        Learn More.....
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="bg-gray-50 p-6 rounded-lg flex flex-col h-full">
+                    <h3 className="text-xl font-semibold text-blue-900 mb-4">Fund of Funds Support</h3>
+                    <p className="text-gray-700 mb-3">Track FoF metrics for any portfolio</p>
+                    <ul className="space-y-2 text-gray-700 flex-grow">
+                      <li className="flex items-start">
+                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                        </svg>
+                        Fund of Funds Management Fees
+                      </li>
+                      <li className="flex items-start">
+                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                        </svg>
+                        FoF incentive Fees
+                      </li>
+                      <li className="flex items-start">
+                        <svg className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                        </svg>
+                        Investor Hurdle rate monitoring and projection
+                      </li>
+                    </ul>
+                    <div className="flex justify-end mt-4">
+                      <Link href="#fund-of-funds-support" className="text-blue-900 font-medium hover:text-blue-700">
                         Learn More.....
                       </Link>
                     </div>
@@ -296,7 +320,7 @@ export default function InvestmentTeamsPage() {
                     Eliminate manual data entry errors and reduce time spent on data preparation, allowing your team to focus on analysis and strategic decision-making.
                   </p>
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    Venturis Connex automates the collection of your LP portals data daily. Connex downloads appropriate GP documents, examines the data as it is collected and applies the appropriate business rules to identify data exceptions. Connex can provide data in various formats and can push data to specific client data stores.
+                    Venturis Connex automates the collection of your data warehouse, fund accounting systems, and LP portals data daily. Connex downloads appropriate GP documents, examines the data as it is collected and applies the appropriate business rules to identify data exceptions. Connex can provide data in various formats and can push data to specific client data stores.
                   </p>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
@@ -380,28 +404,90 @@ export default function InvestmentTeamsPage() {
             {/* Liquidity Planning section - MOVED ABOVE Investment Monitoring */}
             <section id="liquidity-planning">
               <h2 className="text-4xl font-light text-blue-900 mb-8">
-                Portfolio Construction with Liquidity Planning & Capital Allocation
+                Portfolio Construction
               </h2>
               <div className="space-y-12">
                 <div className="bg-gray-50 py-8 px-8 rounded-lg">
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    Reduce risks of Idle Cash Over Commitment using our Monte Carlo commitment pacing models to continuously update allocation plans based on desired strategies and liquidity options. Additionally, track and receive alerts on adherence to actual and projection portfolio mandates and key financial tracking metrics.
+                    Build pacing plans that hit target liquidity and diversification metrics. Model calls/distributions, strategies, and secondaries with allocator grade forecasts for each portfolio.
                   </p>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    Commitment Pacing Software for Private Markets Allocators
+                  </h3>
                   <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    Set, track and monitor Fund of Funds Waterfalls for any portfolio with actual and projected waterfalls which include Fund of Funds Management Fees and Incentive Fees.
+                    Hitting policy targets without over or under committing requires more than a spreadsheet. Our portfolio construction model utilizes a Monte Carlo model for portfolio initial construction and ongoing portfolio optimization based on metrics you set. Venturis models fund cash flows, recycling, and secondary activity to keep your portfolio on track. Set targets for liquidity, sector and vintage diversification, and strategy buckets, then simulate commitment plans that respect your liquidity, risk limits, and pipeline.
                   </p>
-                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    You manage billions of dollars in alternative assets, sitting on idle cash or overcommitting can cost you millions each year.
-                  </p>
-                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    Using Neural Network/ML modeling of fund cash flows yields more accurate commitment planning and increases portfolio returns.
-                  </p>
-                  <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                    You ended the year with $200mil in cash on the books in your fund portfolio. If that were to be the norm each year what would it cost you on an annual basis? Venturis provides the tools to better forecast fund cash flows incorporating user defined liquidity measures to increase portfolio leverage.
-                  </p>
-                  <p className="text-xl text-gray-700 mt-8">
-                    Commitment Pacing Models: Continuously updates allocation plans based on changing fund cash flows and macro conditions.
-                  </p>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    Build Pacing Plans with Confidence
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Allocator grade cash flow engine (calls, dists, fees, FX, secondary trades)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Policy aware modeling (strategy/geography/manager caps)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Scenario testing (base, bear, accelerated deployment)</span>
+                    </li>
+                  </ul>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    Portfolio Construction from Plan to Execution
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Use your fund models or ours to forecast and reforecast all fund capital calls & net outflows by quarter/month for each portfolio</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>See liquidity and strategy target bands and alert drifts</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Export to manager reports; share securely with stakeholders</span>
+                    </li>
+                  </ul>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    What Makes Venturis Different
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Portfolio, Fund and Position level projections, comprehensive data ingestion, and allocator controls in one place.</span>
+                    </li>
+                  </ul>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    FAQ
+                  </h3>
+                  <div className="space-y-4 text-xl text-gray-700 mb-6 ml-6">
+                    <div>
+                      <p className="flex items-start">
+                        <span className="mr-3">•</span>
+                        <span><strong>How is this better than Excel?</strong> — Maintain a single source of truth with versioned scenarios and audit trails; no broken links or manual roll forwards.</span>
+                      </p>
+                    </div>
+                    <div>
+                      <p className="flex items-start">
+                        <span className="mr-3">•</span>
+                        <span><strong>Can we model SMAs and evergreen funds?</strong> — Yes; configure pacing and liquidity rules per vehicle.</span>
+                      </p>
+                    </div>
+                    <div>
+                      <p className="flex items-start">
+                        <span className="mr-3">•</span>
+                        <span><strong>Do you integrate with fund accounting data?</strong> — Yes; connectors for leading systems and LP portals.</span>
+                      </p>
+                    </div>
+                  </div>
                   
                   {/* Link to Why Choose Venturis page */}
                   <div className="mt-8 pt-6 border-t border-gray-300 flex justify-end">
@@ -438,6 +524,113 @@ export default function InvestmentTeamsPage() {
                   <p className="text-xl text-gray-700 leading-relaxed">
                     Empower your investment team with instant access to the data and analysis needed to make informed decisions, respond to market opportunities, and optimize portfolio performance in real time.
                   </p>
+                </div>
+              </div>
+            </section>
+
+            <section id="fund-of-funds-support">
+              <h2 className="text-4xl font-light text-blue-900 mb-8">
+                Venturis Fund of Funds (FoF) Manager Support
+              </h2>
+              <div className="space-y-12">
+                <div className="bg-gray-50 py-8 px-8 rounded-lg">
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                    Venturis provides FoF managers a single system to model, assess, and report management & incentive fees, hurdles, and net performance across complex alternative portfolios—historically and forward-looking.
+                  </p>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    What Venturis Does
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Portfolio level FoF fees:</strong> Configure management and incentive/performance fees with portfolio specific hurdle rates with flexible bases (commitment, invested cost, NAV) and effective date changes.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Historical fee tracking:</strong> Persist and audit all calculated and manually entered fees</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Forward projections:</strong> Project fees, carry waterfalls, and net returns for both the investor group (LPs) and the manager (FoF entity).</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Investor & manager views:</strong> Dedicated outputs for LP reporting (net of FoF fees) and manager P&L (gross fees, net revenue after expenses, carry accruals).</span>
+                    </li>
+                  </ul>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    How It Works
+                  </h3>
+                  <ol className="space-y-2 text-xl text-gray-700 mb-6 ml-6 list-decimal">
+                    <li className="pl-2">
+                      <strong>Ingest & normalize:</strong> Load commitments, capital activity, NAVs, and valuations from your sources; standardize to Venturis schema.
+                    </li>
+                    <li className="pl-2">
+                      <strong>Model setup:</strong> Define fee schedules, hurdle parameters, and reporting cohorts (investor groups, sleeves, share classes).
+                    </li>
+                    <li className="pl-2">
+                      <strong>Calculate & project:</strong> Run historical calculations and forward scenarios (base, stress, pacing).
+                    </li>
+                    <li className="pl-2">
+                      <strong>Report & share:</strong> Publish investor ready and manager ready outputs (PDF, Excel, portal) with drill through.
+                    </li>
+                  </ol>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    Outputs You Get
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Historical fee ledger:</strong> Periodized management and incentive fees with drivers and audit notes.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Projected fees & carry:</strong> Multi period forecasts with sensitivities (NAV growth, pacing, FX, write downs).</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Net performance:</strong> Time weighted and money weighted returns net of FoF fees at portfolio and investor group levels.</span>
+                    </li>
+                  </ul>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    Controls & Governance
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Role based approvals for fee schedules and overrides.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Versioning & audit trail on every calculation.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span>Data lineage from source file → normalized record → fee output.</span>
+                    </li>
+                  </ul>
+                  
+                  <h3 className="text-2xl font-semibold text-blue-900 mb-4">
+                    Why Venturis for FoF
+                  </h3>
+                  <ul className="space-y-2 text-xl text-gray-700 mb-6 ml-6">
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Purpose built for alternatives:</strong> Handles commitments, capital calls/distributions, and irregular cash flows natively.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Manager & investor alignment:</strong> One system produces both manager economics and LP net outcomes—with identical data.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="mr-3">•</span>
+                      <span><strong>Faster closes:</strong> Automated workpapers and exports reduce manual fee work and reconciliation time.</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </section>
