@@ -13,7 +13,12 @@ export async function POST(request: NextRequest) {
       ADMIN_EMAIL: process.env.ADMIN_EMAIL
     });
     const formData = await request.json();
-    console.log('API: Form data received:', { ...formData, SMTP_PASS: '[REDACTED]' });
+    // Sanitize form data before logging to prevent log injection
+    const safeFormData = Object.entries(formData).reduce((acc, [key, value]) => {
+      acc[key] = typeof value === 'string' ? value.replace(/[\n\r]/g, ' ').substring(0, 100) : value;
+      return acc;
+    }, {} as any);
+    console.log('API: Form data received:', { ...safeFormData, SMTP_PASS: '[REDACTED]' });
     
     // Handle both contact form and request-demo form
     const isContactForm = formData.name && !formData.firstName;
@@ -76,7 +81,7 @@ export async function POST(request: NextRequest) {
       await transporter.verify();
       console.log('API: SMTP connection verified successfully');
     } catch (verifyError) {
-      console.error('API: SMTP verification failed:', verifyError);
+      console.error('API: SMTP verification failed:', verifyError instanceof Error ? verifyError.message.replace(/[\n\r]/g, ' ') : 'Unknown error');
       // For Office 365 SMTP AUTH issues, log the error but try sending anyway
       if (verifyError instanceof Error && verifyError.message.includes('SmtpClientAuthentication is disabled')) {
         console.log('API: Office 365 SMTP AUTH disabled - will attempt to send emails anyway and see if they work');
@@ -233,7 +238,7 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.log('API: Caught error in try/catch');
-    console.error('API: Email sending error:', error);
+    console.error('API: Email sending error:', error instanceof Error ? error.message.replace(/[\n\r]/g, ' ') : 'Unknown error');
     // Return more detailed error information
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
     console.error('API: Error details:', {
