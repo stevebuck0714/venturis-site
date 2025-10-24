@@ -1,19 +1,57 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import { generateMetadata as generateSEOMetadata, generateBreadcrumbJsonLd } from '@/utils/seo';
 
-export const metadata: Metadata = {
-  title: "About Us | Venturis",
-  description: "Meet the team behind Venturis Financial - leaders in financial technology innovation",
-};
+export const metadata = generateSEOMetadata({
+  title: "About Venturis",
+  description: "Meet the team behind Venturis Financial - leaders in financial technology innovation. Over 50 years of private markets experience dedicated to transforming investment operations.",
+  keywords: [
+    'about venturis',
+    'fintech leadership',
+    'private markets experience',
+    'investment technology team',
+    'wealth management experts',
+    'financial software company',
+    'allocator technology',
+    'investment platform team',
+    'fintech innovation',
+    'private markets technology',
+  ],
+  canonical: '/about',
+  type: 'profile',
+  modifiedDate: '2025-01-10',
+});
 
 export default function AboutPage() {
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about' },
+  ]);
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: 'About Venturis',
+    description: 'Venturis was developed in partnership with two multi-billion-dollar allocators, bringing decades of private-markets technology and wealth platform experience.',
+    url: 'https://venturisfinancial.com/about',
+  };
+
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <div className="space-y-12">
-          {/* Header */}
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">About Venturis</h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+        <div className="max-w-4xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="space-y-12">
+            {/* Header */}
+            <div className="text-center">
+              <h1 className="text-4xl font-bold text-gray-900 mb-4">About Venturis</h1>
+              <p className="text-sm text-gray-600 mb-4">Last Updated: January 10, 2025</p>
             <p className="text-xl text-gray-600 leading-relaxed">
               We're a team of financial technology experts with over 50 years of private markets experience dedicated to transforming how investment firms operate, making complex financial operations simpler and more efficient.
             </p>

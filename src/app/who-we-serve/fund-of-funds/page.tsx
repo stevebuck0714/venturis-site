@@ -1,18 +1,59 @@
 import { Metadata } from "next";
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
 
-export const metadata: Metadata = {
-  title: "Fund of Funds | Venturis",
-  description: "Venturis LP for Fund of Funds",
-};
+export const metadata = generateSEOMetadata({
+  title: "Fund of Funds Management Platform",
+  description: "Advanced analytics, incentive fee waterfalls, and commitment pacing for fund of funds managers. Comprehensive portfolio management and investor reporting platform.",
+  keywords: [
+    'fund of funds software',
+    'fund of funds platform',
+    'FoF management',
+    'fund of funds analytics',
+    'incentive fee calculation',
+    'fund of funds reporting',
+    'fund of funds technology',
+    'alternative investment platform',
+    'private markets fund of funds',
+    'fund of funds waterfalls',
+  ],
+  canonical: '/who-we-serve/fund-of-funds',
+  type: 'article',
+  modifiedDate: '2024-10-28',
+});
 
 export default function FundOfFundsPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Fund of Funds Solutions',
+    description: 'Comprehensive platform for fund of funds managers featuring advanced analytics, incentive fee waterfalls, commitment pacing, and multi-asset class reporting.',
+    url: '/who-we-serve/fund-of-funds',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Who We Serve', url: '/who-we-serve' },
+    { name: 'Fund of Funds', url: '/who-we-serve/fund-of-funds' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <div className="flex-grow">
-        <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-8">
-            Venturis LP for Fund of Funds
-          </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+        <div className="flex-grow">
+          <div className="max-w-[90rem] mx-auto px-6 py-12">
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Venturis LP for Fund of Funds
+            </h1>
+            <div className="flex items-center gap-6 mb-4 text-gray-600">
+              <span className="text-sm">Last Updated: October 28, 2024</span>
+              <span className="text-sm">•</span>
+              <span className="text-sm">Managing 100+ fund of funds portfolios with $20B+ in commitments</span>
+            </div>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

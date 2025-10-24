@@ -1,18 +1,59 @@
 import { Metadata } from "next";
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
 
-export const metadata: Metadata = {
-  title: "Family Offices | Venturis",
-  description: "Venturis LP for Family Offices",
-};
+export const metadata = generateSEOMetadata({
+  title: "Family Office Investment Platform",
+  description: "Comprehensive investment management platform for family offices. Multi-asset class reporting, portfolio analytics, and investor reporting for private and public investments.",
+  keywords: [
+    'family office software',
+    'family office investment platform',
+    'multi-asset class reporting',
+    'family office technology',
+    'private wealth management',
+    'family office analytics',
+    'investment management family office',
+    'family office portfolio management',
+    'family office reporting',
+    'wealth management platform',
+  ],
+  canonical: '/who-we-serve/family-offices',
+  type: 'article',
+  modifiedDate: '2024-11-05',
+});
 
 export default function FamilyOfficesPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Family Office Solutions',
+    description: 'Comprehensive investment management platform for family offices featuring multi-asset class reporting, portfolio analytics, and advanced investor reporting.',
+    url: '/who-we-serve/family-offices',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Who We Serve', url: '/who-we-serve' },
+    { name: 'Family Offices', url: '/who-we-serve/family-offices' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <div className="flex-grow">
-        <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-8">
-            Venturis LP for Family Offices
-          </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+        <div className="flex-grow">
+          <div className="max-w-[90rem] mx-auto px-6 py-12">
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Venturis LP for Family Offices
+            </h1>
+            <div className="flex items-center gap-6 mb-4 text-gray-600">
+              <span className="text-sm">Last Updated: November 5, 2024</span>
+              <span className="text-sm">•</span>
+              <span className="text-sm">Trusted by 50+ multi-billion dollar family offices</span>
+            </div>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

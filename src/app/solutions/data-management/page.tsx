@@ -2,15 +2,44 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
+
+// Note: metadata export doesn't work with 'use client', so we'll add it via Head component or remove 'use client'
+// For now, adding structured data only
 
 export default function DataManagementPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Data Management & Automation',
+    description: 'Automated data collection and management platform for alternative investments. Venturis Connex gathers, validates, and processes investment data from LP portals and fund administrators.',
+    url: '/solutions/data-management',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Data Management', url: '/solutions/data-management' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <div className="flex-grow">
-        <div className="max-w-[90rem] mx-auto px-6 py-16">
-          <h1 className="text-6xl font-light text-blue-900 mb-12">
-            Data Management
-          </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+        <div className="flex-grow">
+          <div className="max-w-[90rem] mx-auto px-6 py-16">
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Data Management
+            </h1>
+            <div className="flex items-center gap-6 mb-8 text-gray-600">
+              <span className="text-sm">Last Updated: December 8, 2024</span>
+              <span className="text-sm">•</span>
+              <span className="text-sm">Processing 100,000+ documents monthly for 75+ organizations</span>
+            </div>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

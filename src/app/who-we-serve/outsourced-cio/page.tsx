@@ -1,18 +1,59 @@
 import { Metadata } from "next";
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
 
-export const metadata: Metadata = {
-  title: "Outsourced CIO | Venturis",
-  description: "Venturis LP for OCIO's",
-};
+export const metadata = generateSEOMetadata({
+  title: "Outsourced CIO Platform (OCIO)",
+  description: "Comprehensive platform for outsourced CIOs managing client alternative asset allocations. Advanced reporting, portfolio planning, and multi-client management capabilities.",
+  keywords: [
+    'OCIO software',
+    'outsourced CIO platform',
+    'OCIO technology',
+    'outsourced chief investment officer',
+    'OCIO investment management',
+    'OCIO portfolio platform',
+    'outsourced CIO reporting',
+    'OCIO analytics',
+    'multi-client investment platform',
+    'OCIO alternative assets',
+  ],
+  canonical: '/who-we-serve/outsourced-cio',
+  type: 'article',
+  modifiedDate: '2024-11-18',
+});
 
 export default function OutsourcedCIOPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Outsourced CIO Solutions',
+    description: 'Platform for outsourced CIOs featuring comprehensive reporting, portfolio planning, and multi-client alternative asset management capabilities.',
+    url: '/who-we-serve/outsourced-cio',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Who We Serve', url: '/who-we-serve' },
+    { name: 'Outsourced CIO', url: '/who-we-serve/outsourced-cio' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-8">
+          <h1 className="text-6xl font-light text-blue-900 mb-4">
             Venturis LP for OCIO's
           </h1>
+          <div className="flex items-center gap-6 mb-4 text-gray-600">
+            <span className="text-sm">Last Updated: November 18, 2024</span>
+            <span className="text-sm">•</span>
+            <span className="text-sm">Supporting 20+ OCIOs managing 200+ client portfolios</span>
+          </div>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

@@ -1,8 +1,50 @@
 import Link from 'next/link';
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
+
+export const metadata = generateSEOMetadata({
+  title: 'Why Choose Venturis for Portfolio Construction',
+  description: 'Discover why leading investment teams choose Venturis for portfolio construction. AI-powered commitment pacing, allocator-grade forecasting, and real-time portfolio optimization.',
+  keywords: [
+    'why choose venturis',
+    'portfolio construction platform',
+    'commitment pacing software',
+    'allocator grade forecasting',
+    'portfolio construction benefits',
+    'investment portfolio platform',
+    'private markets portfolio construction',
+    'AI portfolio construction',
+    'automated commitment pacing',
+    'portfolio optimization platform',
+  ],
+  canonical: '/solutions/why-choose-venturis-portfolio-construction',
+  type: 'article',
+  modifiedDate: '2024-12-02',
+});
 
 export default function WhyChooseVenturisPortfolioConstructionPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Why Choose Venturis for Portfolio Construction',
+    description: 'Comprehensive guide on why investment teams choose Venturis for portfolio construction, featuring AI-powered commitment pacing and allocator-grade forecasting.',
+    url: '/solutions/why-choose-venturis-portfolio-construction',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Investment Teams', url: '/solutions/investment-teams' },
+    { name: 'Why Choose Venturis', url: '/solutions/why-choose-venturis-portfolio-construction' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-16">
           {/* Back to Investment Teams Link */}
@@ -18,9 +60,10 @@ export default function WhyChooseVenturisPortfolioConstructionPage() {
             </Link>
           </div>
 
-          <h1 className="text-6xl font-light text-blue-900 mb-8">
+          <h1 className="text-6xl font-light text-blue-900 mb-2">
             See Why Investment Teams choose Venturis for Portfolio Construction
           </h1>
+          <p className="text-sm text-gray-600 mb-6">Last Updated: December 2, 2024</p>
           
           <div>
             {/* Intro Section */}

@@ -1,14 +1,60 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
+
+export const metadata = generateSEOMetadata({
+  title: 'Investor Solutions & Client Engagement',
+  description: 'Enhanced client engagement and personalized investment solutions for wealth management firms. AI-powered personalization, proactive recommendations, and seamless digital experiences for modern investors.',
+  keywords: [
+    'investor solutions',
+    'client engagement platform',
+    'investor portal',
+    'personalized investing',
+    'wealth client technology',
+    'digital investor experience',
+    'client relationship management',
+    'investor communications',
+    'wealth management CRM',
+    'client portal software',
+  ],
+  canonical: '/solutions/secondary-market',
+  type: 'article',
+  modifiedDate: '2024-10-18',
+});
 
 export default function ClientSolutionsPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Investor Solutions',
+    description: 'Advanced platform for investor engagement featuring AI-assisted personalization, proactive recommendations, and seamless digital experiences.',
+    url: '/solutions/secondary-market',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Investor Solutions', url: '/solutions/secondary-market' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <div className="flex-grow">
-        <div className="max-w-[90rem] mx-auto px-6 py-16">
-          <h1 className="text-6xl font-light text-blue-900 mb-12">
-            Investor Solutions
-          </h1>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+        <div className="flex-grow">
+          <div className="max-w-[90rem] mx-auto px-6 py-16">
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Investor Solutions
+            </h1>
+            <div className="flex items-center gap-6 mb-8 text-gray-600">
+              <span className="text-sm">Last Updated: October 18, 2024</span>
+              <span className="text-sm">•</span>
+              <span className="text-sm">Serving 10,000+ investors across 50+ wealth management firms</span>
+            </div>
           
           {/* Three horizontal sub-containers with arrows */}
           <div className="flex flex-col lg:flex-row items-center justify-center mb-16 gap-8">

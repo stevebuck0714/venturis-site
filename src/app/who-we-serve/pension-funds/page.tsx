@@ -1,18 +1,59 @@
 import { Metadata } from "next";
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
 
-export const metadata: Metadata = {
-  title: "Pension Funds, Endowments, Foundations | Venturis",
-  description: "Venturis LP for Pension Funds, Endowments and Foundations",
-};
+export const metadata = generateSEOMetadata({
+  title: "Pension Funds, Endowments & Foundations Platform",
+  description: "Comprehensive investment management platform for pension funds, endowments, and foundations. Advanced commitment pacing, portfolio dashboards, and multi-asset class reporting.",
+  keywords: [
+    'pension fund software',
+    'endowment management',
+    'foundation investment platform',
+    'institutional asset management',
+    'pension fund analytics',
+    'endowment portfolio management',
+    'commitment pacing pension',
+    'institutional investment platform',
+    'pension fund reporting',
+    'endowment technology',
+  ],
+  canonical: '/who-we-serve/pension-funds',
+  type: 'article',
+  modifiedDate: '2024-09-12',
+});
 
 export default function PensionFundsPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Pension Fund & Endowment Solutions',
+    description: 'Comprehensive platform for pension funds, endowments, and foundations featuring advanced commitment pacing, portfolio dashboards, and multi-asset class reporting.',
+    url: '/who-we-serve/pension-funds',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Who We Serve', url: '/who-we-serve' },
+    { name: 'Pension Funds', url: '/who-we-serve/pension-funds' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-8">
+          <h1 className="text-6xl font-light text-blue-900 mb-4">
             Venturis LP for Pension Funds, Endowments and Foundations
           </h1>
+          <div className="flex items-center gap-6 mb-4 text-gray-600">
+            <span className="text-sm">Last Updated: September 12, 2024</span>
+            <span className="text-sm">•</span>
+            <span className="text-sm">Supporting 40+ institutional investors with $35B+ in assets</span>
+          </div>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

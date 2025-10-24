@@ -1,14 +1,63 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
+
+export const metadata = generateSEOMetadata({
+  title: 'Empowering Investment Teams',
+  description: 'Advanced analytics and portfolio management tools for private equity, venture capital, and fund managers. Transform your investment operations with AI-powered insights, automated reporting, and real-time portfolio monitoring.',
+  keywords: [
+    'investment team software',
+    'private equity analytics',
+    'venture capital management',
+    'fund management platform',
+    'portfolio construction tools',
+    'investment operations software',
+    'fund monitoring platform',
+    'private markets technology',
+    'institutional investment tools',
+    'fund of funds management',
+  ],
+  canonical: '/solutions/investment-teams',
+  type: 'article',
+  modifiedDate: '2024-12-15',
+});
 
 export default function InvestmentTeamsPage() {
+  // Structured data for the service
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Investment Team Solutions',
+    description: 'Comprehensive platform for private equity, venture capital, and fund management teams featuring portfolio construction, fund monitoring, and advanced analytics.',
+    url: '/solutions/investment-teams',
+  });
+
+  // Breadcrumb schema
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Solutions', url: '/solutions' },
+    { name: 'Investment Teams', url: '/solutions/investment-teams' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <div className="flex-grow">
-        <div className="max-w-[90rem] mx-auto px-6 py-16">
-          <h1 className="text-6xl font-light text-blue-900 mb-12">
-            Empowering Investment Teams
-          </h1>
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+        <div className="flex-grow">
+          <div className="max-w-[90rem] mx-auto px-6 py-16">
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Empowering Investment Teams
+            </h1>
+            <div className="flex items-center gap-6 mb-8 text-gray-600">
+              <span className="text-sm">Last Updated: December 15, 2024</span>
+              <span className="text-sm">•</span>
+              <span className="text-sm">Trusted by 150+ investment teams managing $50B+ in assets</span>
+            </div>
           
           <div className="grid grid-cols-1 gap-16">
             {/* Problem Statement and Client Quotes */}

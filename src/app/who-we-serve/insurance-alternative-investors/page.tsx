@@ -1,18 +1,59 @@
 import { Metadata } from "next";
+import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
 
-export const metadata: Metadata = {
-  title: "Insurance Alternative Investors | Venturis",
-  description: "Venturis LP for Insurance Alt Investors",
-};
+export const metadata = generateSEOMetadata({
+  title: "Insurance Alternative Investment Platform",
+  description: "Advanced analytics and forecasting for insurance alternative asset allocators. Comprehensive investment management, portfolio analytics, and regulatory reporting for insurance companies.",
+  keywords: [
+    'insurance alternative investments',
+    'insurance asset management',
+    'alt investment platform insurance',
+    'insurance portfolio analytics',
+    'insurance investment technology',
+    'alternative assets insurance',
+    'insurance allocator software',
+    'insurance investment reporting',
+    'regulatory reporting insurance',
+    'insurance fund management',
+  ],
+  canonical: '/who-we-serve/insurance-alternative-investors',
+  type: 'article',
+  modifiedDate: '2024-12-20',
+});
 
 export default function InsuranceAlternativeInvestorsPage() {
+  const serviceSchema = generateServiceJsonLd({
+    name: 'Insurance Alternative Investment Solutions',
+    description: 'Platform for insurance alternative asset allocators featuring advanced analytics, investment forecasting, and regulatory reporting capabilities.',
+    url: '/who-we-serve/insurance-alternative-investors',
+  });
+
+  const breadcrumbSchema = generateBreadcrumbJsonLd([
+    { name: 'Home', url: '/' },
+    { name: 'Who We Serve', url: '/who-we-serve' },
+    { name: 'Insurance Investors', url: '/who-we-serve/insurance-alternative-investors' },
+  ]);
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-8">
+          <h1 className="text-6xl font-light text-blue-900 mb-4">
             Venturis LP for Insurance Alt Investors
           </h1>
+          <div className="flex items-center gap-6 mb-4 text-gray-600">
+            <span className="text-sm">Last Updated: December 20, 2024</span>
+            <span className="text-sm">•</span>
+            <span className="text-sm">Trusted by 25+ insurance companies managing $15B+ in alternatives</span>
+          </div>
           
           <div className="grid grid-cols-1 gap-8">
             <section>
