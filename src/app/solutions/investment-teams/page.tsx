@@ -53,11 +53,7 @@ export default function InvestmentTeamsPage() {
             <h1 className="text-6xl font-light text-blue-900 mb-4">
               Empowering Investment Teams
             </h1>
-            <div className="flex items-center gap-6 mb-8 text-gray-600">
-              <span className="text-sm">Last Updated: December 15, 2024</span>
-              <span className="text-sm">•</span>
-              <span className="text-sm">Trusted by 150+ investment teams managing $50B+ in assets</span>
-            </div>
+            <p className="text-sm text-gray-600 mb-8">Last Updated: December 15, 2024</p>
           
           <div className="grid grid-cols-1 gap-16">
             {/* Problem Statement and Client Quotes */}

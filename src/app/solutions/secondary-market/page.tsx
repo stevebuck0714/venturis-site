@@ -50,11 +50,7 @@ export default function ClientSolutionsPage() {
             <h1 className="text-6xl font-light text-blue-900 mb-4">
               Investor Solutions
             </h1>
-            <div className="flex items-center gap-6 mb-8 text-gray-600">
-              <span className="text-sm">Last Updated: October 18, 2024</span>
-              <span className="text-sm">•</span>
-              <span className="text-sm">Serving 10,000+ investors across 50+ wealth management firms</span>
-            </div>
+            <p className="text-sm text-gray-600 mb-8">Last Updated: October 18, 2024</p>
           
           {/* Three horizontal sub-containers with arrows */}
           <div className="flex flex-col lg:flex-row items-center justify-center mb-16 gap-8">

@@ -46,14 +46,10 @@ export default function PensionFundsPage() {
       />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-4">
-            Venturis LP for Pension Funds, Endowments and Foundations
-          </h1>
-          <div className="flex items-center gap-6 mb-4 text-gray-600">
-            <span className="text-sm">Last Updated: September 12, 2024</span>
-            <span className="text-sm">•</span>
-            <span className="text-sm">Supporting 40+ institutional investors with $35B+ in assets</span>
-          </div>
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Venturis LP for Pension Funds, Endowments and Foundations
+            </h1>
+            <p className="text-sm text-gray-600 mb-8">Last Updated: September 12, 2024</p>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

@@ -46,14 +46,10 @@ export default function InsuranceAlternativeInvestorsPage() {
       />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-12">
-          <h1 className="text-6xl font-light text-blue-900 mb-4">
-            Venturis LP for Insurance Alt Investors
-          </h1>
-          <div className="flex items-center gap-6 mb-4 text-gray-600">
-            <span className="text-sm">Last Updated: December 20, 2024</span>
-            <span className="text-sm">•</span>
-            <span className="text-sm">Trusted by 25+ insurance companies managing $15B+ in alternatives</span>
-          </div>
+            <h1 className="text-6xl font-light text-blue-900 mb-4">
+              Venturis LP for Insurance Alt Investors
+            </h1>
+            <p className="text-sm text-gray-600 mb-8">Last Updated: December 20, 2024</p>
           
           <div className="grid grid-cols-1 gap-8">
             <section>

@@ -49,11 +49,7 @@ export default function FundOfFundsPage() {
             <h1 className="text-6xl font-light text-blue-900 mb-4">
               Venturis LP for Fund of Funds
             </h1>
-            <div className="flex items-center gap-6 mb-4 text-gray-600">
-              <span className="text-sm">Last Updated: October 28, 2024</span>
-              <span className="text-sm">•</span>
-              <span className="text-sm">Managing 100+ fund of funds portfolios with $20B+ in commitments</span>
-            </div>
+            <p className="text-sm text-gray-600 mb-8">Last Updated: October 28, 2024</p>
           
           <div className="grid grid-cols-1 gap-8">
             <section>
