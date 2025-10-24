@@ -91,6 +91,9 @@ export default function Header() {
           <Link href="/blog" className="text-sm xl:text-base text-gray-700 hover:text-blue-900 transition-colors">
             Blog
           </Link>
+          <Link href="/documentation" className="text-sm xl:text-base text-gray-700 hover:text-blue-900 transition-colors">
+            Documentation
+          </Link>
         </div>
 
         {/* Desktop CTA */}
@@ -210,6 +213,13 @@ export default function Header() {
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Blog
+                    </Link>
+                    <Link
+                      href="/documentation"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Documentation
                     </Link>
                   </div>
                   <div className="py-6">
