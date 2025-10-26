@@ -252,24 +252,22 @@ export default function RootLayout({
           }}
         />
         {/* Google Analytics */}
-        {process.env.GOOGLE_ANALYTICS_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=G-3D4EMGJXED`}
+          />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-3D4EMGJXED');
+              `,
+            }}
+          />
+        </>
         {/* Microsoft Clarity */}
         {process.env.MICROSOFT_CLARITY_ID && (
           <script

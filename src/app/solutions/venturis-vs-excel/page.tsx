@@ -1,50 +1,8 @@
 import Link from 'next/link';
-import { generateMetadata as generateSEOMetadata, generateServiceJsonLd, generateBreadcrumbJsonLd } from '@/utils/seo';
-
-export const metadata = generateSEOMetadata({
-  title: 'Venturis vs Excel/Legacy Systems',
-  description: 'Move from spreadsheets to an allocator-grade system. Discover why Excel and legacy tools fall short for private markets portfolio management and how Venturis delivers enterprise-grade solutions.',
-  keywords: [
-    'venturis vs excel',
-    'excel alternative investment',
-    'spreadsheet to portfolio system',
-    'allocator grade software',
-    'excel limitations private markets',
-    'portfolio management vs excel',
-    'investment software vs spreadsheet',
-    'legacy system replacement',
-    'enterprise portfolio platform',
-    'spreadsheet risks investment',
-  ],
-  canonical: '/solutions/venturis-vs-excel',
-  type: 'article',
-  modifiedDate: '2024-11-08',
-});
 
 export default function VenturisVsExcelPage() {
-  const serviceSchema = generateServiceJsonLd({
-    name: 'Venturis vs Excel Comparison',
-    description: 'Comprehensive comparison of Venturis allocator-grade platform vs Excel spreadsheets and legacy systems for private markets portfolio management.',
-    url: '/solutions/venturis-vs-excel',
-  });
-
-  const breadcrumbSchema = generateBreadcrumbJsonLd([
-    { name: 'Home', url: '/' },
-    { name: 'Solutions', url: '/solutions' },
-    { name: 'Investment Teams', url: '/solutions/investment-teams' },
-    { name: 'Venturis vs Excel', url: '/solutions/venturis-vs-excel' },
-  ]);
-
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <div className="flex-grow">
         <div className="max-w-[90rem] mx-auto px-6 py-16">
           {/* Back to Investment Teams Link */}
@@ -60,11 +18,10 @@ export default function VenturisVsExcelPage() {
             </Link>
           </div>
 
-          <h1 className="text-6xl font-light text-blue-900 mb-2">
+          <h1 className="text-6xl font-light text-blue-900 mb-8">
             Venturis vs Excel/Legacy<br />
             From Spreadsheets to an Allocator Grade System
           </h1>
-          <p className="text-sm text-gray-600 mb-6">Last Updated: November 8, 2024</p>
           
           <div>
             {/* Intro Section */}
