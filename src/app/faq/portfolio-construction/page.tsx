@@ -252,7 +252,7 @@ export default function PortfolioConstructionFAQPage() {
               <div className="space-y-4">
                 <div className="pb-4 border-b border-gray-300">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-gray-900">Small Portfolios: 10-15 Funds</h3>
+                    <h3 className="font-semibold text-gray-900">Small Portfolios: 10-200 Funds</h3>
                     <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded text-sm font-semibold">Minimal Diversification</span>
                   </div>
                   <p className="text-gray-700 text-sm"><strong>Pros:</strong> Manageable operationally, lower due diligence costs</p>
@@ -262,7 +262,7 @@ export default function PortfolioConstructionFAQPage() {
                 
                 <div className="pb-4 border-b border-gray-300">
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-gray-900">Medium Portfolios: 25-35 Funds</h3>
+                    <h3 className="font-semibold text-gray-900">Medium Portfolios: 200-1,000 Funds</h3>
                     <span className="bg-green-100 text-green-800 px-3 py-1 rounded text-sm font-semibold">Well-Diversified</span>
                   </div>
                   <p className="text-gray-700 text-sm"><strong>Pros:</strong> Strong diversification, balanced risk, manageable complexity</p>
@@ -272,12 +272,12 @@ export default function PortfolioConstructionFAQPage() {
                 
                 <div>
                   <div className="flex justify-between items-center mb-2">
-                    <h3 className="font-semibold text-gray-900">Large Portfolios: 40-60+ Funds</h3>
+                    <h3 className="font-semibold text-gray-900">Large Portfolios: above 1,000 Funds</h3>
                     <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded text-sm font-semibold">Maximum Diversification</span>
                   </div>
                   <p className="text-gray-700 text-sm"><strong>Pros:</strong> Minimal concentration risk, statistical smoothing of returns</p>
                   <p className="text-gray-700 text-sm"><strong>Cons:</strong> Dilutes manager selection alpha, high operational burden, mediocre funds creep in</p>
-                  <p className="text-gray-700 text-sm italic mt-2">Best for: Large institutions with >$5 Bil in PE assets and dedicated teams</p>
+                  <p className="text-gray-700 text-sm italic mt-2">Best for: Large institutions with &gt;$5 Bil in PE assets and dedicated teams</p>
                 </div>
               </div>
             </div>
