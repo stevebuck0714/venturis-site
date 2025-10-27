@@ -229,7 +229,7 @@ export default function MLCashFlowForecastingPage() {
                   <strong>Purpose:</strong> Capture non-linear relationships and interaction effects between variables
                 </p>
                 <p className="text-gray-700 mb-3">
-                  <strong>How it works:</strong> Decision trees learn complex "if-then" rules. For example: "If vintage year is 2022 AND interest rates rise above 4% AND fund size is under $500M, THEN capital calls slow by 25%." XGBoost uses gradient boosting to combine hundreds of trees into a highly accurate ensemble.
+                  <strong>How it works:</strong> Decision trees learn complex "if-then" rules. For example: "If vintage year is 2022 AND interest rates rise above 4% AND fund size is under $3B, THEN capital calls slow by 25%." XGBoost uses gradient boosting to combine hundreds of trees into a highly accurate ensemble.
                 </p>
                 <p className="text-gray-700">
                   <strong>Best for:</strong> Handling complex interactions between fund characteristics and macro conditions
@@ -489,7 +489,7 @@ export default function MLCashFlowForecastingPage() {
             <div className="bg-blue-50 rounded-lg p-6 mt-6">
               <h3 className="font-semibold text-blue-900 mb-3">Real-World Impact Example:</h3>
               <p className="text-gray-700 mb-2">
-                A $2B endowment with 25% private equity target ($500M) using machine learning forecasting vs traditional curves:
+                A $10B endowment with 25% private equity target using machine learning forecasting vs traditional curves:
               </p>
               <ul className="flex flex-col gap-2 text-gray-700 mt-4">
                 <li><strong>Reduced cash drag:</strong> Lowered reserves from 10% to 6% of portfolio = $80M additional invested capital = $4M/year additional return (5% spread)</li>
@@ -833,7 +833,7 @@ export default function MLCashFlowForecastingPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">→</span>
-                  <span><strong>Fund Size Dynamics:</strong> $100M funds behave differently than $5B mega-funds even within same strategy</span>
+                  <span><strong>Fund Size Dynamics:</strong> $1B funds behave differently than $20B mega-funds even within same strategy</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-3 mt-1">→</span>

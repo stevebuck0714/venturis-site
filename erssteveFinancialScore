@@ -1,0 +1,20 @@
+[33mfa4266e[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add Google Analytics tracking (G-3D4EMGJXED) and update SEO across site
+[33m6b1681a[m Add Documentation page and ML Cash Flow Forecasting FAQ - Created /documentation index page listing all 5 FAQ pages - Added new ML Cash Flow Forecasting FAQ with neural network/ML fund modeling content - Updated Header navigation with Documentation link (desktop and mobile) - Fixed fade animations on FAQ pages - Updated portfolio size thresholds to institutional scale (, +)
+[33m1a9f0b0[m Add 4 comprehensive FAQ pages for Google AI Overview optimization - Excel Alternatives, Commitment Pacing, Portfolio Construction, Allocator-Grade Software with varied last updated dates, rich Q&A content, and FAQPage structured data
+[33m30619f1[m Remove customer count and size statistics from all Solutions and Who We Serve pages
+[33mdd542aa[m Complete comprehensive SEO optimization for Venturis site - 14 pages with metadata, structured data, varied dates, and content update for Wealth Advisory 80/20 Problem
+[33m3c71d57[m Update Investment Teams page: Portfolio Construction content, FoF Support section, and Client Solutions to Investor Solutions rebrand
+[33m5196e0d[m Add new pages: Why Choose Venturis for Portfolio Construction and Venturis vs Excel comparison pages with proper navigation links
+[33m761cc59[m Add actual environment variable values to test API
+[33m591d3e7[m Force redeploy to pick up environment variables
+[33mc154ae9[m Fix vercel.json rewrite rule that was blocking API routes
+[33md4a48f4[m Add test API route to verify deployment and environment variables
+[33m6df2243[m Add extensive logging to debug production 500 error
+[33m9c8dbb6[m Final Gmail SMTP configuration - production ready
+[33m25d6477[m Fix Gmail address for email authentication
+[33mc49c55b[m Add environment variable debugging to verify SMTP settings
+[33m68e23f0[m Add detailed error logging for debugging email issues
+[33m5d78f88[m Fix SMTP host typo for Gmail configuration
+[33mcb42b3f[m Switch to Gmail SMTP for reliable production email delivery
+[33m662465e[m Update email API logging for production deployment
+[33m818a551[m Fix email functionality with GoDaddy SMTP configuration

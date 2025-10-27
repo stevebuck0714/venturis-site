@@ -230,12 +230,11 @@ export default function CommitmentPacingFAQPage() {
             <div className="bg-blue-50 rounded-lg p-6 mb-6">
               <h3 className="font-semibold text-gray-900 mb-3">Example Calculation:</h3>
               <div className="space-y-2 text-gray-700">
-                <p><strong>Total Portfolio:</strong> $100M (100% PE/VC/Hedge - no public assets)</p>
+                <p><strong>Total Portfolio:</strong> $5B (100% PE/VC/Hedge - no public assets)</p>
                 <p><strong>Target Strategy Allocation:</strong> 50% Buyout, 25% VC, 15% Secondaries, 10% Growth</p>
                 <p><strong>Target Geography:</strong> 70% US, 20% Europe, 10% Asia</p>
                 <p><strong>Target ESG Focus:</strong> 30% ESG-aligned mandates</p>
                 <p><strong>Annual Commitment Rate:</strong> 25% of target</p>
-                <p><strong>Annual Commitment Amount:</strong> $25M per year across strategies/geographies</p>
                 <p><strong>Time to Steady-State:</strong> 4-5 years while maintaining mandate allocations</p>
               </div>
             </div>
@@ -512,10 +511,9 @@ export default function CommitmentPacingFAQPage() {
             <div className="bg-blue-50 rounded-lg p-6 mb-6">
               <h3 className="font-semibold text-gray-900 mb-3">Example:</h3>
               <div className="space-y-2 text-gray-700">
-                <p><strong>Starting Position:</strong> 100% PE/VC/Hedge portfolio = $100M total</p>
+                <p><strong>Starting Position:</strong> 100% PE/VC/Hedge portfolio = $5B total</p>
                 <p><strong>Target Strategy Mix:</strong> 50% Buyout, 25% VC, 15% Secondaries, 10% Growth</p>
                 <p><strong>Scenario:</strong> VC holdings marked down 30% due to market correction</p>
-                <p><strong>New Values:</strong> Buyout $50M, VC $17.5M (down from $25M), Secondaries $15M, Growth $10M = $92.5M total</p>
                 <p><strong>New Allocation:</strong> Buyout 54%, VC 19%, Secondaries 16%, Growth 11%</p>
                 <p><strong>Result:</strong> Buyout overweight vs 50% target, VC significantly underweight vs 25% target - increase VC pacing, reduce buyout pacing</p>
               </div>

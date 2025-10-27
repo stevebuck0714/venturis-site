@@ -257,7 +257,7 @@ export default function PortfolioConstructionFAQPage() {
                   </div>
                   <p className="text-gray-700 text-sm"><strong>Pros:</strong> Manageable operationally, lower due diligence costs</p>
                   <p className="text-gray-700 text-sm"><strong>Cons:</strong> High concentration risk, manager-specific exposure, vintage year sensitivity</p>
-                  <p className="text-gray-700 text-sm italic mt-2">Best for: Programs under $50M in PE assets</p>
+                  <p className="text-gray-700 text-sm italic mt-2">Best for: Programs under $1 Bil in PE assets</p>
                 </div>
                 
                 <div className="pb-4 border-b border-gray-300">
@@ -267,7 +267,7 @@ export default function PortfolioConstructionFAQPage() {
                   </div>
                   <p className="text-gray-700 text-sm"><strong>Pros:</strong> Strong diversification, balanced risk, manageable complexity</p>
                   <p className="text-gray-700 text-sm"><strong>Cons:</strong> Requires dedicated resources, ongoing manager monitoring</p>
-                  <p className="text-gray-700 text-sm italic mt-2">Best for: Programs with $50-500M in PE assets - institutional sweet spot</p>
+                  <p className="text-gray-700 text-sm italic mt-2">Best for: Programs with $1-$5 Bil in PE assets - institutional sweet spot</p>
                 </div>
                 
                 <div>
@@ -277,12 +277,12 @@ export default function PortfolioConstructionFAQPage() {
                   </div>
                   <p className="text-gray-700 text-sm"><strong>Pros:</strong> Minimal concentration risk, statistical smoothing of returns</p>
                   <p className="text-gray-700 text-sm"><strong>Cons:</strong> Dilutes manager selection alpha, high operational burden, mediocre funds creep in</p>
-                  <p className="text-gray-700 text-sm italic mt-2">Best for: Large institutions with $500M+ in PE assets and dedicated teams</p>
+                  <p className="text-gray-700 text-sm italic mt-2">Best for: Large institutions with >$5 Bil in PE assets and dedicated teams</p>
                 </div>
               </div>
             </div>
             <p className="text-gray-700 leading-relaxed">
-              <strong>Recommendation:</strong> Target 25-35 funds for most institutional programs. This provides strong diversification benefits while maintaining focus on top-performing managers and keeping operational complexity manageable. Smaller programs should prioritize quality over quantity, investing in 15-20 best-in-class funds rather than diversifying into mediocre managers.
+              <strong>Recommendation:</strong> Target 500 + funds for most institutional programs. This provides strong diversification benefits while maintaining focus on top-performing managers and keeping operational complexity manageable. Smaller programs should prioritize quality over quantity, investing in 15-20 best-in-class funds rather than diversifying into mediocre managers.
             </p>
           </div>
 

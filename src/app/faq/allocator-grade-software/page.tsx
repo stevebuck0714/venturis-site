@@ -94,14 +94,6 @@ export default function AllocatorGradeSoftwareFAQPage() {
       },
       {
         '@type': 'Question',
-        name: 'How much does allocator-grade software cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Enterprise platforms typically cost $50,000-$200,000 annually based on assets under management, number of funds, user count, and feature requirements. Implementation costs add $25,000-$100,000 one-time. While significant, ROI comes from time savings, error reduction, better investment decisions, and enabling portfolio growth without proportional headcount increases. Most institutions achieve payback within 12-18 months.',
-        },
-      },
-      {
-        '@type': 'Question',
         name: 'What support and training should allocator-grade software provide?',
         acceptedAnswer: {
           '@type': 'Answer',
@@ -327,13 +319,13 @@ export default function AllocatorGradeSoftwareFAQPage() {
               
               <div className="bg-blue-50 border-l-4 border-blue-600 p-5">
                 <h3 className="font-semibold text-gray-900 mb-2">$1-$4B: Strong Business Case</h3>
-                <p className="text-gray-700 mb-2">Most organizations in this range benefit significantly from professional software. Time savings, error reduction, and better insights justify the investment as portfolios grow toward 25-50 funds.</p>
+                <p className="text-gray-700 mb-2">Most organizations in this range benefit significantly from professional software. Time savings, error reduction, and better insights justify the investment as portfolios grow toward 400-600 funds.</p>
                 <p className="text-gray-700 text-sm italic">This is typically when Excel limitations become painful: reporting takes days, errors occur regularly, and compliance becomes difficult.</p>
               </div>
               
               <div className="bg-green-50 border-l-4 border-green-600 p-5">
                 <h3 className="font-semibold text-gray-900 mb-2">Above $4B: Essential</h3>
-                <p className="text-gray-700 mb-2">At this scale, allocator-grade software is essential for operational efficiency and risk management. Portfolios typically include 50+ funds across multiple strategies, vintages, and geographies.</p>
+                <p className="text-gray-700 mb-2">At this scale, allocator-grade software is essential for operational efficiency and risk management. Portfolios typically include 500+ funds across multiple strategies, vintages, and geographies.</p>
                 <p className="text-gray-700 text-sm italic">Excel becomes untenable. Manual processes can't scale, error risks are unacceptable, and institutional stakeholders expect professional reporting.</p>
               </div>
             </div>
@@ -581,64 +573,6 @@ export default function AllocatorGradeSoftwareFAQPage() {
           </div>
 
           {/* Question 9 */}
-          <div>
-            <h2 className="text-2xl font-normal text-blue-900 mb-4">
-              How much does allocator-grade software cost?
-            </h2>
-            <p className="text-gray-700 leading-relaxed mb-6">
-              Enterprise portfolio management platforms represent significant but justifiable investments:
-            </p>
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <h3 className="font-semibold text-gray-900 mb-4">Typical Pricing Structure:</h3>
-              <div className="space-y-3">
-                <div className="pb-3 border-b border-gray-300">
-                  <p className="text-gray-700"><strong>Annual Subscription:</strong> $50,000 - $200,000</p>
-                  <p className="text-gray-700 text-sm italic mt-1">Based on assets under management, number of funds, user count, and feature requirements</p>
-                </div>
-                <div className="pb-3 border-b border-gray-300">
-                  <p className="text-gray-700"><strong>Implementation:</strong> $25,000 - $100,000 one-time</p>
-                  <p className="text-gray-700 text-sm italic mt-1">Data migration, configuration, training, and integration setup</p>
-                </div>
-                <div>
-                  <p className="text-gray-700"><strong>Total First Year:</strong> $75,000 - $300,000</p>
-                  <p className="text-gray-700 text-sm italic mt-1">Ongoing years: subscription only (potentially with modest annual increases)</p>
-                </div>
-              </div>
-            </div>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              <strong>Return on Investment:</strong>
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              While costs are significant, ROI typically materializes within 12-18 months through:
-            </p>
-            <ul className="space-y-2 text-gray-700 mb-6">
-              <li className="flex items-start">
-                <span className="text-green-600 mr-3 mt-1">✓</span>
-                <span><strong>Time Savings:</strong> 500-1000 hours annually eliminating manual data entry, reconciliation, and error correction</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-3 mt-1">✓</span>
-                <span><strong>Error Reduction:</strong> Preventing costly mistakes from formula errors or manual entry mistakes</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-3 mt-1">✓</span>
-                <span><strong>Better Decisions:</strong> Real-time insights enabling improved commitment pacing and manager selection</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-3 mt-1">✓</span>
-                <span><strong>Scalability:</strong> Managing portfolio growth without proportional headcount increases</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-600 mr-3 mt-1">✓</span>
-                <span><strong>Compliance:</strong> Meeting audit requirements and avoiding regulatory issues</span>
-              </li>
-            </ul>
-            <p className="text-gray-700 leading-relaxed">
-              <strong>Sizing Guidance:</strong> Organizations with $50-100M in PE assets typically spend $60-90K annually. Those with $100-250M spend $90-140K. Above $250M, costs range $140-200K+ depending on complexity. View as percentage of assets: 0.05-0.15% of AUM annually is typical range.
-            </p>
-          </div>
-
-          {/* Question 10 */}
           <div>
             <h2 className="text-2xl font-normal text-blue-900 mb-4">
               What support and training should allocator-grade software provide?

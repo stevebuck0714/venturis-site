@@ -232,7 +232,7 @@ export default function ExcelAlternativesFAQPage() {
               <div className="space-y-3">
                 <div className="bg-white border border-gray-200 rounded p-4">
                   <h3 className="font-semibold text-gray-900 mb-2">Portfolio Size</h3>
-                  <p className="text-gray-700">Managing 20+ fund investments across multiple asset classes or vintage years</p>
+                  <p className="text-gray-700">Managing 100+ fund investments across multiple asset classes or vintage years</p>
                 </div>
                 <div className="bg-white border border-gray-200 rounded p-4">
                   <h3 className="font-semibold text-gray-900 mb-2">Portfolio Construction</h3>
@@ -439,7 +439,7 @@ export default function ExcelAlternativesFAQPage() {
               </ul>
             </div>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Enterprise portfolio management software typically costs $50,000-$200,000 annually depending on portfolio size and complexity. However, most firms break even within 6-12 months through:
+              Breakeven is achieved through:
             </p>
             <ul className="space-y-2 text-gray-700 mb-4">
               <li className="flex items-start">
