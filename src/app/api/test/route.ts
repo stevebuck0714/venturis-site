@@ -1,6 +1,15 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
+  // Disable test endpoint in production for security
+  if (process.env.NODE_ENV === 'production') {
+    return NextResponse.json({ 
+      error: 'Not found' 
+    }, { 
+      status: 404 
+    });
+  }
+  
   console.log('Test API route called');
   return NextResponse.json({ 
     message: 'Test API working!',
@@ -10,18 +19,22 @@ export async function GET() {
 }
 
 export async function POST() {
+  // Disable test endpoint in production for security
+  if (process.env.NODE_ENV === 'production') {
+    return NextResponse.json({ 
+      error: 'Not found' 
+    }, { 
+      status: 404 
+    });
+  }
+  
   console.log('Test API POST called');
+  
+  // Only return safe information - never expose sensitive environment variables
   return NextResponse.json({ 
     message: 'Test POST working!',
-    hasEnvVars: {
-      SMTP_HOST: !!process.env.SMTP_HOST,
-      SMTP_USER: !!process.env.SMTP_USER,
-      SMTP_PASS: !!process.env.SMTP_PASS
-    },
-    actualValues: {
-      SMTP_HOST: process.env.SMTP_HOST,
-      SMTP_USER: process.env.SMTP_USER,
-      SMTP_PASS: process.env.SMTP_PASS?.substring(0, 4) + '***'
-    }
+    timestamp: new Date().toISOString(),
+    // Only indicate if email is configured, without exposing actual values
+    emailConfigured: !!(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS)
   });
 }
