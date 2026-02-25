@@ -108,11 +108,11 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/images/og-venturis.jpg',
+        url: '/images/performance-graph.png',
         width: 1200,
         height: 630,
         alt: 'Venturis Private Markets Intelligence Platform',
-        type: 'image/jpeg',
+        type: 'image/png',
       },
     ],
     locale: 'en_US',
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Venturis - Intelligence for Private Markets',
     description: 'Sophisticated intelligence and analytics for private markets, empowering investment teams with AI-driven portfolio construction and real-time decision-making tools.',
-    images: ['/images/twitter-venturis.jpg'],
+    images: ['/images/performance-graph.png'],
     creator: '@venturis',
     site: '@venturis',
   },
