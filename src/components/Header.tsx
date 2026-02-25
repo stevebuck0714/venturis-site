@@ -107,8 +107,13 @@ export default function Header() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden">
-          <div className="fixed inset-0 z-50">
-            <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="fixed inset-0 z-50" onClick={() => setIsMobileMenuOpen(false)}>
+            {/* Backdrop overlay */}
+            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div 
+              className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="flex items-center justify-between">
                 <Link href="/" className="-m-1.5 p-1.5" onClick={() => setIsMobileMenuOpen(false)}>
                   <span className="text-2xl font-bold text-blue-900">
