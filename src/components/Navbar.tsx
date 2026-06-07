@@ -18,14 +18,14 @@ export default function Navbar() {
 
         {/* Navigation Items */}
         <div className="flex items-center space-x-8">
-          <Link href="/solutions/investment-teams" className="text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">
-            Investment Teams
+          <Link href="/solutions/gp-platform" className="text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            GP Platform
           </Link>
-          <Link href="/solutions/front-office" className="text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">
-            Front Office
+          <Link href="/solutions/lp-platform" className="text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            LP Platform
           </Link>
-          <Link href="/solutions/secondary-market" className="text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">
-            Secondary Market
+          <Link href="/blog" className="text-lg text-gray-700 hover:text-blue-600 transition-colors font-medium">
+            Insights
           </Link>
           <Link 
             href="/request-demo" 

@@ -16,22 +16,28 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Platform */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Solutions</h3>
+            <h3 className="font-semibold text-white mb-4">Platform</h3>
             <ul className="space-y-2">
-              <li><Link href="/solutions/investment-teams" className="text-gray-300 hover:text-white">Investment Management</Link></li>
-              <li><Link href="/solutions/front-office" className="text-gray-300 hover:text-white">Wealth Advisory</Link></li>
-              <li><Link href="/solutions/secondary-market" className="text-gray-300 hover:text-white">Investor Solutions</Link></li>
+              <li><Link href="/solutions/gp-platform" className="text-gray-300 hover:text-white">GP Platform</Link></li>
+              <li><Link href="/gp-who-we-serve" className="text-gray-300 hover:text-white">GP Who We Serve</Link></li>
+              <li><Link href="/private-equity-software" className="text-gray-300 hover:text-white">Private Equity Software</Link></li>
+              <li><Link href="/fund-management" className="text-gray-300 hover:text-white">Fund Management</Link></li>
+              <li><Link href="/portfolio-monitoring" className="text-gray-300 hover:text-white">Portfolio Monitoring</Link></li>
+              <li><Link href="/solutions/lp-platform" className="text-gray-300 hover:text-white">LP Platform</Link></li>
+              <li><Link href="/lp-who-we-serve" className="text-gray-300 hover:text-white">LP Who We Serve</Link></li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Insights */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Resources</h3>
+            <h3 className="font-semibold text-white mb-4">Insights</h3>
             <ul className="space-y-2">
-              <li><Link href="/blog" className="text-gray-300 hover:text-white">Blog</Link></li>
-              <li><Link href="/documentation" className="text-gray-300 hover:text-white">Documentation</Link></li>
+              <li><Link href="/gp-insights" className="text-gray-300 hover:text-white">GP Insights</Link></li>
+              <li><Link href="/blog" className="text-gray-300 hover:text-white">LP Insights</Link></li>
+              <li><Link href="/documentation" className="text-gray-300 hover:text-white">LP Documentation</Link></li>
+              <li><Link href="/faq/portfolio-construction" className="text-gray-300 hover:text-white">LP FAQs</Link></li>
               <li><Link href="/support" className="text-gray-300 hover:text-white">Support</Link></li>
             </ul>
           </div>

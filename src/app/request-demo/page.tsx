@@ -230,11 +230,19 @@ export default function RequestDemo() {
                     required
                   >
                     <option value="">Select an option</option>
+                    <option value="gp-platform">GP Platform</option>
+                    <option value="private-equity-software">Private Equity Operating Platform</option>
+                    <option value="fund-management">Fund Management</option>
+                    <option value="portfolio-monitoring">Portfolio Monitoring</option>
+                    <option value="due-diligence">Due Diligence</option>
+                    <option value="liquidity-management">Liquidity Management</option>
+                    <option value="fund-administration">Fund Administration</option>
+                    <option value="corelytics">Corelytics Portfolio Company Performance</option>
                     <option value="portfolio-construction">Portfolio Construction</option>
                     <option value="commitment-pacing">Commitment Pacing</option>
                     <option value="fund-monitoring">Fund and Portfolio Monitoring</option>
-                    <option value="wealth-advisory">Advanced Wealth Advisory Support</option>
-                    <option value="client-engagement">Enhanced Client Engagement</option>
+                    <option value="mandate-compliance">Mandate Compliance</option>
+                    <option value="investor-reporting">Investor Reporting</option>
                     <option value="multiple">Multiple Areas</option>
                   </select>
                 </div>

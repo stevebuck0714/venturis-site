@@ -30,6 +30,7 @@ export function generateMetadata({
   const metaDescription = description || 'Sophisticated intelligence and analytics for private markets, empowering investment teams with AI-driven portfolio construction and real-time decision-making tools.';
   const ogImage = image ? `${baseUrl}${image}` : `${baseUrl}/images/og-venturis.jpg`;
   const canonicalUrl = canonical ? `${baseUrl}${canonical}` : undefined;
+  const openGraphType = type === 'product' ? 'website' : type;
 
   // Combine base keywords with page-specific keywords
   const baseKeywords = [
@@ -52,7 +53,7 @@ export function generateMetadata({
     keywords: allKeywords,
     robots: noIndex ? 'noindex,nofollow' : 'index,follow',
     openGraph: {
-      type,
+      type: openGraphType,
       siteName: 'Venturis',
       title: fullTitle,
       description: metaDescription,
