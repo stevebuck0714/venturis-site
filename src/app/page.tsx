@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import StructuredData from '@/components/SEO/StructuredData';
 
@@ -87,13 +85,13 @@ export default function Home() {
     <>
       <StructuredData data={homepageStructuredData} />
       <div className="min-h-screen bg-white">
-      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 py-8 sm:py-16">
-        <section className="mb-16">
-          <div className="text-left pt-8">
+      <div className="max-w-[90rem] mx-auto px-4 sm:px-6 py-6 sm:py-10">
+        <section className="mb-8">
+          <div className="text-left pt-4">
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-normal text-blue-900 mb-4 text-left leading-tight">
               Intelligence for Private Markets
             </h1>
-            <div className="min-h-[3rem] sm:min-h-[4rem] flex flex-col sm:flex-row sm:items-center mb-12 sm:mb-24">
+            <div className="min-h-[3rem] sm:min-h-[4rem] flex flex-col sm:flex-row sm:items-center mb-6 sm:mb-10">
               <span className="text-xl sm:text-2xl lg:text-4xl font-light text-black mb-2 sm:mb-0 sm:mr-4">supporting</span>
               <div className="h-[1.2em] leading-[1.2] overflow-hidden text-2xl sm:text-3xl lg:text-6xl font-normal text-black">
                 <div className="home-word-rotation">
@@ -111,7 +109,6 @@ export default function Home() {
         {/* Platform Overview Section */}
         <section className="mt-16 mb-16">
           <div className="text-left">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light text-blue-900 mb-4 leading-tight">LP Platform</h2>
             <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 mb-8 sm:mb-12 max-w-4xl leading-relaxed whitespace-nowrap">
               Intelligence for private markets across funds, investments, and portfolio companies.
             </p>
@@ -166,108 +163,6 @@ export default function Home() {
 
       </div>
 
-      {/* Latest Insights Section */}
-      <section className="bg-gray-50 py-16 -mx-6 mt-8">
-        <div className="max-w-[90rem] mx-auto px-6">
-          <div className="text-left mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-light text-blue-900 mb-4 leading-tight">Latest Insights</h2>
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-600 leading-relaxed">
-              Stay informed with our latest thinking on private capital markets, technology trends, and industry developments
-            </p>
-          </div>
-          
-          <div className="scroll-container">
-            <div className="scroll-content">
-              
-              <div className="group">
-                <div className="relative article-box bg-white border border-black rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-15">
-                    <svg className="w-32 h-32" fill="none" stroke="#F59E0B" viewBox="0 0 24 24" strokeWidth={1}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="relative">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Portfolio Construction</h3>
-                    <p className="text-gray-600 mb-4">Utilizing Regression Analysis, Neural Networks, and ML for Accurate Portfolio Construction and Ongoing Updates</p>
-                    <div className="flex justify-end">
-                      <Link href="/articles/portfolio-construction" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">Learn More →</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="relative article-box bg-white border border-black rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-15">
-                    <svg className="w-32 h-32" fill="none" stroke="#F59E0B" viewBox="0 0 24 24" strokeWidth={1}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                  </div>
-                  <div className="relative">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Secondary Market Platform</h3>
-                    <p className="text-gray-600 mb-4">Unlocking Liquidity in Private Markets for Retail Investors</p>
-                    <div className="flex justify-end">
-                      <Link href="/articles/secondary-market-platform" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">Learn More →</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="relative article-box bg-white border border-black rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-15">
-                    <svg className="w-32 h-32" fill="none" stroke="#F59E0B" viewBox="0 0 24 24" strokeWidth={1}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                    </svg>
-                  </div>
-                  <div className="relative">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Reporting Pain Points</h3>
-                    <p className="text-gray-600 mb-4">An analysis of why legacy reporting methods are failing in private asset management and how automation is the answer</p>
-                    <div className="flex justify-end">
-                      <Link href="/articles/private-asset-reporting" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">Learn More →</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="relative article-box bg-white border border-black rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-15">
-                    <svg className="w-32 h-32" fill="none" stroke="#F59E0B" viewBox="0 0 24 24" strokeWidth={1}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <div className="relative">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Private Market Trends & AI Predictions</h3>
-                    <p className="text-gray-600 mb-4">Exploring how AI is transforming private markets and shaping investment decisions in 2025</p>
-                    <div className="flex justify-end">
-                      <Link href="/articles/market-trends" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">Learn More →</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="relative article-box bg-white border border-black rounded-lg overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center opacity-15">
-                    <svg className="w-32 h-32" fill="none" stroke="#F59E0B" viewBox="0 0 24 24" strokeWidth={1}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                    </svg>
-                  </div>
-                  <div className="relative">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">Allocator Data Challenges</h3>
-                    <p className="text-gray-600 mb-4">How automation is transforming data management for capital allocators in private markets</p>
-                    <div className="flex justify-end">
-                      <Link href="/articles/data-challenges-automation" className="text-blue-600 font-medium hover:text-blue-800 transition-colors">Learn More →</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
     </>
   );
