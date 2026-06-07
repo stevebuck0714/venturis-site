@@ -10,7 +10,7 @@ export default function LiquidityManagementPage() {
     <GPSolutionPage
       eyebrow="Liquidity Management for Private Equity"
       title="Understand Liquidity Before It Becomes a Problem"
-      subtitle="Track available capital across funds, facilities, commitments, borrowing capacity, and liquidity exposure in one operating view."
+      subtitle="Track capital across funds, facilities, commitments, borrowing capacity, and liquidity exposure in one operating view."
       sections={[
         {
           title: 'Track',

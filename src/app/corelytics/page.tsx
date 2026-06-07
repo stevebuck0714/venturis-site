@@ -83,7 +83,7 @@ const beforeAfter = [
 export default function CorelyticsPage() {
   return (
     <main className="min-h-screen bg-white">
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 sm:py-14">
         <div className="max-w-5xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 mb-4">
             Corelytics
@@ -91,7 +91,7 @@ export default function CorelyticsPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-blue-900 mb-6 leading-tight">
             Tomorrow&apos;s problem? It&apos;s hiding in your numbers. Find and fix it today.
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 max-w-4xl">
+          <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-6 max-w-4xl">
             Corelytics connects to your accounting and ERP systems, surfaces the issues hiding in your data, and gives you the analysis to act — in plain language, every day. When you need experienced judgment, senior advisors are available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -105,12 +105,12 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-12">
+      <section className="bg-gray-50 py-8 sm:py-10">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
-          <p className="text-xl text-gray-700 leading-relaxed max-w-5xl mb-8">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-5xl mb-6">
             Built by operators who&apos;ve spent their careers inside financial systems for complex businesses. We&apos;ve seen what breaks — and built the tool we wished existed.
           </p>
-          <h2 className="text-2xl font-light text-blue-900 mb-6">Connects to the tools you already use</h2>
+          <h2 className="text-2xl font-light text-blue-900 mb-4">Connects to the tools you already use</h2>
           <div className="logo-marquee">
             <div className="logo-marquee-track">
               {[...integrations, ...integrations].map((integration, index) => (
@@ -123,12 +123,12 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 sm:py-12">
         <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 mb-4">How It Works</p>
         <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-6">
           Connection → Clarity → Action. In minutes.
         </h2>
-        <p className="text-xl text-gray-600 leading-relaxed max-w-5xl mb-12">
+        <p className="text-xl text-gray-600 leading-relaxed max-w-5xl mb-8">
           You spent thousands on an ERP system or accounting platform and you&apos;re still exporting CSVs and building spreadsheets on the weekend to figure out what&apos;s going on. Your financial infrastructure is not giving you the information you need to manage your business. That&apos;s the problem we solve.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -142,12 +142,12 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="bg-blue-900 text-white py-16">
+      <section className="bg-blue-900 text-white py-10 sm:py-12">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
           <h2 className="text-3xl sm:text-5xl font-light mb-6">
             See exactly what your business is doing. No card. No call. Just your numbers.
           </h2>
-          <p className="text-xl text-blue-100 leading-relaxed max-w-5xl mb-8">
+          <p className="text-xl text-blue-100 leading-relaxed max-w-5xl mb-6">
             Sign up in under a minute. Explore a fully loaded demo account — real operational data, real financials, real cash flow. When you&apos;re ready to connect your own books, we&apos;re here.
           </p>
           <Link href="/request-demo" className="inline-flex rounded-md bg-white px-6 py-3 text-base font-semibold text-blue-900 hover:bg-blue-50 transition-colors">
@@ -156,14 +156,14 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 sm:py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 mb-4">AskCorelytics</p>
             <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-6">
               Financial statements tell you what already happened. AskCorelytics what to do next.
             </h2>
-            <p className="text-xl text-gray-600 leading-relaxed mb-8">
+            <p className="text-xl text-gray-600 leading-relaxed mb-6">
               Ask about cash flow, a hiring decision, a client going slow-pay, inventory turns, or AP aging. Corelytics connects the dots between what your numbers are saying and what action to take — in plain English, in seconds, any time of day.
             </p>
             <ul className="space-y-3 text-gray-700">
@@ -190,12 +190,12 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-10 sm:py-12">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
           <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-4">
             The full picture, every morning
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed max-w-5xl mb-12">
+          <p className="text-xl text-gray-600 leading-relaxed max-w-5xl mb-8">
             Real visibility into your business — financial and operational — without a full-time CFO or a weekend of spreadsheets.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -206,7 +206,7 @@ export default function CorelyticsPage() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
             <div className="bg-white rounded-lg p-8 text-center shadow-sm">
               <div className="text-4xl font-light text-blue-900 mb-2">15+</div>
               <div className="text-gray-600">Years in production</div>
@@ -223,11 +223,11 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 sm:py-12">
         <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-6">
           The AI gives you clarity. The advisors give you confidence — when you want them.
         </h2>
-        <p className="text-xl text-gray-600 leading-relaxed max-w-5xl mb-10">
+          <p className="text-xl text-gray-600 leading-relaxed max-w-5xl mb-8">
           Corelytics doesn&apos;t just show you the number — it tells you what&apos;s driving it, models what happens next, and drafts the communication you need. For the judgment calls that feel too big to make alone, experienced advisors are available.
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -242,12 +242,12 @@ export default function CorelyticsPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-10 sm:py-12">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-10">
+          <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-8">
             What changes when you can spot critical issues before they cause problems
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6">
             {beforeAfter.map((item) => (
               <div key={item.title} className="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
                 <h3 className="text-2xl font-light text-blue-900 mb-6">{item.title}</h3>

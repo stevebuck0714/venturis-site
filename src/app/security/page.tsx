@@ -37,19 +37,6 @@ export default function SecurityPage() {
           </section>
 
           <section className="mb-16">
-            <h2 className="text-2xl font-medium text-blue-900 mb-6">Compliance & Certifications</h2>
-            <p className="text-gray-600 mb-6">
-              Our platform adheres to international security standards and regulations:
-            </p>
-            <ul className="list-disc list-inside space-y-3 text-gray-600 mb-8">
-              <li>SOC 2 Type II certified</li>
-              <li>ISO 27001 compliant</li>
-              <li>GDPR compliant</li>
-              <li>Regular third-party security assessments</li>
-            </ul>
-          </section>
-
-          <section className="mb-16">
             <h2 className="text-2xl font-medium text-blue-900 mb-6">Access Control</h2>
             <p className="text-gray-600 mb-6">
               We implement strict access controls to protect your data:

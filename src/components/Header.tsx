@@ -37,6 +37,7 @@ const lpInsightLinks = [
 
 const companyLinks = [
   { href: '/about', label: 'About' },
+  { href: '/advisory-team', label: 'Advisory Team' },
   { href: '/contact', label: 'Contact' },
   { href: '/careers', label: 'Careers' },
   { href: '/security', label: 'Security' },
@@ -124,6 +125,7 @@ export default function Header() {
     || pathname.startsWith('/who-we-serve/insurance-alternative-investors');
   const isCorelyticsActive = pathname.startsWith('/corelytics');
   const isCompanyActive = pathname.startsWith('/about')
+    || pathname.startsWith('/advisory-team')
     || pathname.startsWith('/contact')
     || pathname.startsWith('/careers')
     || pathname.startsWith('/security');

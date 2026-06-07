@@ -1,14 +1,14 @@
 import GPSolutionPage from '@/components/GPSolutionPage';
 
 export const metadata = {
-  title: 'Fund Management Software for Private Equity | Venturis',
+  title: 'Fund Management for Private Equity | Venturis',
   description: 'Modern fund management software for PE firms moving beyond spreadsheets and disconnected reporting.',
 };
 
 export default function FundManagementPage() {
   return (
     <GPSolutionPage
-      eyebrow="Fund Management Software"
+      eyebrow="Fund Management"
       title="Modern Fund Management for PE Firms"
       subtitle="Move beyond spreadsheets and disconnected reporting with a single workspace for fund operations, investor reporting, and performance oversight."
       sections={[
@@ -18,6 +18,9 @@ export default function FundManagementPage() {
           items: [
             'Fund summaries',
             'Fund KPIs',
+            'Integrated Data Room',
+            'IC Report Management',
+            'Integrated PortCo financials',
             'Cash flow tracking',
             'Capital activity',
             'Fee administration',
@@ -25,6 +28,7 @@ export default function FundManagementPage() {
             'Governance tracking',
             'LP reporting',
           ],
+          itemColumns: 2,
         },
         {
           title: 'Built for PE Finance Teams',

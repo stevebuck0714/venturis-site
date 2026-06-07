@@ -1,17 +1,14 @@
-import Link from 'next/link';
-
 export type GPSection = {
   title: string;
   description?: string;
   items: string[];
+  itemColumns?: 1 | 2;
 };
 
 type GPSolutionPageProps = {
   eyebrow: string;
   title: string;
   subtitle: string;
-  primaryCta?: string;
-  secondaryCta?: string;
   sections: GPSection[];
   differentiator?: {
     title: string;
@@ -23,36 +20,26 @@ export default function GPSolutionPage({
   eyebrow,
   title,
   subtitle,
-  primaryCta = 'Schedule Demo',
-  secondaryCta = 'Watch Platform Tour',
   sections,
   differentiator,
 }: GPSolutionPageProps) {
   return (
     <main className="min-h-screen bg-white">
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-24">
-        <div className="max-w-5xl">
+      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 mb-4">
             {eyebrow}
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-blue-900 mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-blue-900 mb-6 leading-tight whitespace-nowrap">
             {title}
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8 max-w-4xl">
+          <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-8">
             {subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/request-demo" className="inline-flex justify-center rounded-md bg-blue-900 px-6 py-3 text-base font-semibold text-white hover:bg-blue-800 transition-colors">
-              {primaryCta}
-            </Link>
-            <Link href="/contact" className="inline-flex justify-center rounded-md border border-blue-900 px-6 py-3 text-base font-semibold text-blue-900 hover:bg-blue-50 transition-colors">
-              {secondaryCta}
-            </Link>
-          </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-10 sm:py-12">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {sections.map((section) => (
@@ -65,7 +52,7 @@ export default function GPSolutionPage({
                     {section.description}
                   </p>
                 )}
-                <ul className="space-y-3">
+                <ul className={section.itemColumns === 2 ? 'grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3' : 'space-y-3'}>
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start text-gray-700">
                       <svg className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -82,12 +69,12 @@ export default function GPSolutionPage({
       </section>
 
       {differentiator && (
-        <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-10 sm:py-12">
           <div className="bg-blue-900 rounded-lg p-8 sm:p-12 text-white">
             <h2 className="text-3xl sm:text-4xl font-light mb-4">
               {differentiator.title}
             </h2>
-            <p className="text-xl text-blue-100 leading-relaxed max-w-5xl">
+            <p className="text-xl text-blue-100 leading-relaxed">
               {differentiator.body}
             </p>
           </div>

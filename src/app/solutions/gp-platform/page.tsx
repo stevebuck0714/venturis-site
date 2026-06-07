@@ -52,50 +52,29 @@ const modules = [
   },
 ];
 
-const buyerWorkflows = [
-  {
-    title: 'Private Equity Firms',
-    subtitle: 'Primary buyer',
-    roles: ['Managing Partners', 'CFOs', 'COOs', 'Operating Partners', 'Investment Teams'],
-  },
-  {
-    title: 'Fund Administrators',
-    subtitle: 'Secondary buyer',
-    roles: ['Fund Accounting', 'Investor Reporting', 'Fund Operations', 'Cash Flow & Waterfall Administration'],
-  },
-];
-
 export default function GPPlatformPage() {
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <section className="py-16 sm:py-24">
+      <section className="py-10 sm:py-14">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
           <div className="max-w-5xl mr-auto text-left">
             <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 mb-4">
               GP Platform
             </p>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-blue-900 mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light text-blue-900 mb-6 leading-tight whitespace-nowrap">
               The Operating Platform for Private Equity Firms
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 leading-relaxed mb-4 max-w-4xl">
               Manage funds, portfolio companies, due diligence, liquidity, reporting, and portfolio company performance from a single platform.
             </p>
-            <p className="text-2xl text-blue-900 font-light mb-8">
+            <p className="text-2xl text-blue-900 font-light">
               One system for the entire investment lifecycle.
             </p>
-            <div className="flex flex-col sm:flex-row justify-start gap-4">
-              <Link href="/request-demo" className="inline-flex justify-center rounded-md bg-blue-900 px-6 py-3 text-base font-semibold text-white hover:bg-blue-800 transition-colors">
-                Schedule Demo
-              </Link>
-              <Link href="/contact" className="inline-flex justify-center rounded-md border border-blue-900 px-6 py-3 text-base font-semibold text-blue-900 hover:bg-blue-50 transition-colors">
-                Watch Platform Tour
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-10 sm:py-12">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
@@ -120,35 +99,9 @@ export default function GPPlatformPage() {
         </div>
       </section>
 
-      <section className="max-w-[90rem] mx-auto px-4 sm:px-6 py-16 sm:py-20">
-        <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-10">
-          Workflows for the GP Operating Model
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {buyerWorkflows.map((workflow) => (
-            <div key={workflow.title} className="bg-white border border-blue-200 rounded-lg p-8 shadow-lg">
-              <p className="text-sm font-semibold uppercase tracking-wide text-blue-700 mb-2">
-                {workflow.subtitle}
-              </p>
-              <h3 className="text-3xl font-light text-blue-900 mb-6">{workflow.title}</h3>
-              <ul className="space-y-3">
-                {workflow.roles.map((role) => (
-                  <li key={role} className="flex items-start text-gray-700">
-                    <svg className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span>{role}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="bg-gray-50 py-16 sm:py-20">
+      <section className="bg-gray-50 py-10 sm:py-12">
         <div className="max-w-[90rem] mx-auto px-4 sm:px-6">
-          <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-10">
+          <h2 className="text-3xl sm:text-5xl font-light text-blue-900 mb-8">
             Platform Modules
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
