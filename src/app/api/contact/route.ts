@@ -2,22 +2,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
-  console.log('API: Function started');
   try {
-    console.log('API: Received POST request to /api/contact - Gmail SMTP configured!');
-    console.log('API: Environment variables loaded:', {
-      SMTP_HOST: process.env.SMTP_HOST,
-      SMTP_PORT: process.env.SMTP_PORT,
-      SMTP_USER: process.env.SMTP_USER,
-      SMTP_PASS_LENGTH: process.env.SMTP_PASS?.length,
-      ADMIN_EMAIL: process.env.ADMIN_EMAIL
-    });
     const formData = await request.json();
-    console.log('API: Form data received:', { ...formData, SMTP_PASS: '[REDACTED]' });
     
     // Handle both contact form and request-demo form
     const isContactForm = formData.name && !formData.firstName;
-    console.log('API: Is contact form:', isContactForm);
     
     if (isContactForm) {
       // Contact form validation
@@ -40,14 +29,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if email credentials are configured
-    console.log('API: Checking environment variables...');
-    console.log('API: SMTP_USER exists:', !!process.env.SMTP_USER);
-    console.log('API: SMTP_PASS exists:', !!process.env.SMTP_PASS);
-    console.log('API: SMTP_HOST:', process.env.SMTP_HOST);
-    console.log('API: SMTP_PORT:', process.env.SMTP_PORT);
-    
     if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
-      console.log('Email credentials not configured - simulating email send');
       // For development without email setup, just return success
       return NextResponse.json({ 
         success: true, 
@@ -71,15 +53,12 @@ export async function POST(request: NextRequest) {
     });
     
     // Test the connection (but continue if Office 365 auth is still disabled)
-    console.log('API: Testing SMTP connection...');
     try {
       await transporter.verify();
-      console.log('API: SMTP connection verified successfully');
     } catch (verifyError) {
-      console.error('API: SMTP verification failed:', verifyError);
-      // For Office 365 SMTP AUTH issues, log the error but try sending anyway
+      // For Office 365 SMTP AUTH issues, continue but try sending anyway
       if (verifyError instanceof Error && verifyError.message.includes('SmtpClientAuthentication is disabled')) {
-        console.log('API: Office 365 SMTP AUTH disabled - will attempt to send emails anyway and see if they work');
+        // Continue with sending attempt
       } else {
         throw new Error(`SMTP connection failed: ${verifyError instanceof Error ? verifyError.message : 'Unknown error'}`);
       }
@@ -219,42 +198,26 @@ export async function POST(request: NextRequest) {
     };
 
     // Send both emails
-    console.log('API: Attempting to send emails...');
     await Promise.all([
       transporter.sendMail(adminMailOptions),
       transporter.sendMail(userMailOptions)
     ]);
-    
-    console.log('API: Emails sent successfully');
     return NextResponse.json({ 
       success: true, 
       message: 'Demo request submitted successfully' 
     });
 
   } catch (error) {
-    console.log('API: Caught error in try/catch');
-    console.error('API: Email sending error:', error);
-    // Return more detailed error information
+    // Log error for debugging (only in development)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Email sending error:', error);
+    }
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    console.error('API: Error details:', {
-      name: error instanceof Error ? error.name : 'Unknown',
-      message: errorMessage,
-      stack: error instanceof Error ? error.stack : 'No stack trace'
-    });
-    
-    // Log environment variables (without password) for debugging
-    console.error('API: Environment check:', {
-      SMTP_HOST: process.env.SMTP_HOST,
-      SMTP_PORT: process.env.SMTP_PORT,
-      SMTP_USER: process.env.SMTP_USER,
-      SMTP_PASS_LENGTH: process.env.SMTP_PASS?.length,
-      ADMIN_EMAIL: process.env.ADMIN_EMAIL
-    });
     
     return NextResponse.json(
       { 
         error: 'Failed to send demo request. Please try again.',
-        details: errorMessage // Always return details for debugging
+        ...(process.env.NODE_ENV === 'development' && { details: errorMessage })
       },
       { status: 500 }
     );
