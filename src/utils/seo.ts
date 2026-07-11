@@ -28,7 +28,8 @@ export function generateMetadata({
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://venturisfinancial.com';
   const fullTitle = title ? `${title} | Venturis` : 'Venturis - Intelligence for Private Markets';
   const metaDescription = description || 'Sophisticated intelligence and analytics for private markets, empowering investment teams with AI-driven portfolio construction and real-time decision-making tools.';
-  const ogImage = image ? `${baseUrl}${image}` : `${baseUrl}/images/og-venturis.jpg`;
+  // Use an existing public image as the Open Graph fallback
+  const ogImage = image ? `${baseUrl}${image}` : `${baseUrl}/images/performance-graph.png`;
   const canonicalUrl = canonical ? `${baseUrl}${canonical}` : undefined;
   const openGraphType = type === 'product' ? 'website' : type;
 
@@ -113,7 +114,7 @@ export function generateArticleJsonLd({
     '@type': 'Article',
     headline: title,
     description,
-    image: image ? `${baseUrl}${image}` : `${baseUrl}/images/og-venturis.jpg`,
+    image: image ? `${baseUrl}${image}` : `${baseUrl}/images/performance-graph.png`,
     datePublished: publishedDate,
     dateModified: modifiedDate || publishedDate,
     author: {
@@ -192,7 +193,7 @@ export function generateServiceJsonLd({
     name,
     description,
     url: `${baseUrl}${url}`,
-    image: image ? `${baseUrl}${image}` : `${baseUrl}/images/og-venturis.jpg`,
+    image: image ? `${baseUrl}${image}` : `${baseUrl}/images/performance-graph.png`,
     provider: {
       '@type': 'Organization',
       name: 'Venturis',
