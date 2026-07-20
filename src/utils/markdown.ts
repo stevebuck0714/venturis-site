@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import DOMPurify from 'isomorphic-dompurify';
 
 const articlesDirectory = path.join(process.cwd(), 'src/content/articles');
 
@@ -27,7 +28,20 @@ export async function getArticle(id: string): Promise<ArticleData> {
     const processedContent = await remark()
       .use(html)
       .process(matterResult.content);
-    const contentHtml = processedContent.toString();
+    const rawHtml = processedContent.toString();
+    
+    // Sanitize the HTML to prevent XSS attacks
+    const contentHtml = DOMPurify.sanitize(rawHtml, {
+      ALLOWED_TAGS: [
+        'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+        'p', 'a', 'ul', 'ol', 'li', 'blockquote',
+        'strong', 'em', 'code', 'pre', 'img', 'br',
+        'table', 'thead', 'tbody', 'tr', 'th', 'td',
+        'hr', 'div', 'span'
+      ],
+      ALLOWED_ATTR: ['href', 'src', 'alt', 'title', 'class', 'id'],
+      ALLOW_DATA_ATTR: false
+    });
 
     // Ensure all required fields are present
     if (!matterResult.data.title || !matterResult.data.date || !matterResult.data.excerpt || !matterResult.data.author) {
